@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <!-- 
+ <test thread-count="5" name="Login">
+  <classes>
+  <class name="tests.login.LoginPage"/>
+ <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test> -->
+  
+ <!-- 
+ <test thread-count="5" name="ITRequestorWorkflow">
+  <classes>
+  <class name="tests.ITRequests.ITRequestPage"/>
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+ <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  <class name="tests.ViewPages.ViewPage"/> 
+  </classes>
+  </test>-->
+  
+  <!--
+  <test thread-count="5" name="FunctionalRequestInitiateAndApproverWorkflow">
+  <classes>
+   <class name="tests.functional_Approver_RaisedRequests.FunctionalApprover_RaisedRequestPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/> 
+  </classes>
+  </test> -->
+  
+ <!-- 
+ <test thread-count="5" name="FinanceRequestInitiateAndApproverWorkflow">
+  <classes>
+   <class name="tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page"/>
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+   <class name="tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage"/>
+  </classes>
+  </test>-->
+  
+   <!-- 
+ <test thread-count="5" name="AdminRequestInitiateAndApproverWorkflow">
+  <classes>
+    <class name="tests.admin_New_Request.Admin_New_Request_Page"/>
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+   <class name="tests.admin_View_Request.Admin_View_Request_Page"/>
+  </classes>
+  </test> -->
+  
+ <!--  
+ <test thread-count="5" name="FunctionalRequestRejectionWorkflowForRequestRaisedByITRequestor">
+  <classes>
+  <class name="tests.ITRequests.ITRequestPage"/>
+ <class name="tests.functional_Approver_RequestRejection.Functional_Approver_RequestRejectionPage"/>
+  <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test> -->
+  
+  <!-- 
+  <test thread-count="5" name="FinanceRequestRejectionrWorkflowForRequestRaisedByITRequestor">
+  <classes>
+  <class name="tests.ITRequests.ITRequestPage"/>
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+ <class name="tests.finance_Approver_RequestReject.Finance_Approver_RequestRejectionPage"/>
+  <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test> -->
+  
+<!-- 
+ <test thread-count="5" name="ITRequestorRequestQueriedByFunctionalApproverWorkflow">
+  <classes>
+    <class name="tests.ITRequests.ITRequestPage"/>
+    <class name="tests.functional_Approver_Request_Queried.Functional_Approver_Request_QueriedPage"/>
+  <class name="tests.ITRequestor_ModifyRequests.ITRequestor_Modify_RequestPage"/> 
+  <class name="tests.functional_Approver_QueriedReq_Approval.Functional_Approver_Approve_QueriedRequPage"/>
+   <class name="tests.finance_Approver_Queried_Request_Approve.Finance_Approver_Queried_Request_ApprovePage"/>
+   <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+   <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test>-->
+  
+  <!--  
+ <test thread-count="5" name="ITRequestorRequestQueriedByFinanceApproverWorkflow">
+  <classes>
+  <class name="tests.ITRequests.ITRequestPage"/> 
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+   <class name="tests.finance_Approver_Queried_Request.Finance_Approver_Queried_RequestPage"/>  
+    <class name="tests.functional_Approver_ModifyReq_WhenQueriedby_FinanceApprover.Functional_Approver_ModifyRequest_WhenQueriedBy_FinanceApproverPage"/>
+    <class name="tests.finance_Approver_Queried_Request_Approve.Finance_Approver_Queried_Request_ApprovePage"/>
+    <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+    <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test> -->
+  
+  <!-- 
+ <test thread-count="5" name="FunctionalApproverRequestQueriedByFunctionalApproverWorkflow">
+  <classes>
+  <class name="tests.functional_Approver_RaisedRequests.FunctionalApprover_RaisedRequestPage"/>
+  <class name="tests.functional_Approver_Request_Queried.Functional_Approver_Request_QueriedPage"/>
+  <class name="tests.functional_Approver_ModifyRequest.Functional_Approver_ModifyRequestPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+   <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  </classes>
+  </test>-->
+  
+   <!-- 
+ <test thread-count="5" name="FunctionalApproverRequestQueriedByFinanceApproverWorkflow">
+  <classes>
+  <class name="tests.functional_Approver_RaisedRequests.FunctionalApprover_RaisedRequestPage"/>
+ <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+  <class name="tests.finance_Approver_Queried_Request.Finance_Approver_Queried_RequestPage"/>  
+   <class name="tests.functional_Approver_ModifyReq_WhenQueriedby_FinanceApprover.Functional_Approver_ModifyRequest_WhenQueriedBy_FinanceApproverPage"/>
+    <class name="tests.finance_Approver_Queried_Request_Approve.Finance_Approver_Queried_Request_ApprovePage"/>
+    <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  </classes>
+  </test>  -->
+  
+  <!-- 
+ <test thread-count="5" name="FinanceApproverRequestQueriedByFunctionalApproverWorkflow">
+  <classes>
+   <class name="tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page"/>
+  <class name="tests.functional_Approver_Request_Queried.Functional_Approver_Request_QueriedPage"/>
+  <class name="tests.finance_Approver_ModifyRequest.Finance_Approver_ModifyRequestPage"/>
+  <class name="tests.functional_Approver_Approval.Functional_Approver_ApprovalPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  <class name="tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage"/>
+  </classes>
+  </test> -->
+  
+  <!--
+ <test thread-count="5" name="FinanceApproverRequestQueriedByFinanceApproverWorkflow">
+  <classes>
+   <class name="tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page"/>
+   <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+   <class name="tests.finance_Approver_Queried_Request.Finance_Approver_Queried_RequestPage"/>  
+   <class name="tests.functional_Approver_ModifyReq_WhenQueriedby_FinanceApprover.Functional_Approver_ModifyRequest_WhenQueriedBy_FinanceApproverPage"/>
+    <class name="tests.finance_Approver_Queried_Request_Approve.Finance_Approver_Queried_Request_ApprovePage"/>
+    <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+    <class name="tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage"/>
+  </classes>
+  </test> -->
+  
+  <!--
+ <test thread-count="5" name="AdminConfiguration">
+  <classes>
+  
+  </classes>
+  </test> -->
+</suite> 
+

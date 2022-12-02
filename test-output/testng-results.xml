@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-02T14:15:37 IST" name="Suite" finished-at="2022-12-02T14:22:30 IST" duration-ms="412805">
+    <groups>
+    </groups>
+    <test started-at="2022-12-02T14:15:37 IST" name="FinanceRequestInitiateAndApproverWorkflow" finished-at="2022-12-02T14:22:30 IST" duration-ms="412805">
+      <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage">
+        <test-method signature="functionalPOapproval(java.lang.String,java.lang.String)[pri:0, instance:tests.functional_PO_Approvals.Functional_PO_ApprovalPage@6d763516]" started-at="2022-12-02T14:20:00 IST" name="functionalPOapproval" data-provider="getdata" finished-at="2022-12-02T14:21:25 IST" duration-ms="84773" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P20000006@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Capita#2022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- functionalPOapproval -->
+      </class> <!-- tests.functional_PO_Approvals.Functional_PO_ApprovalPage -->
+      <class name="tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage">
+        <test-method signature="ViewRequestDisplay(java.lang.String,java.lang.String)[pri:0, instance:tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage@52bf72b5]" started-at="2022-12-02T14:21:25 IST" name="ViewRequestDisplay" data-provider="getdata" finished-at="2022-12-02T14:22:30 IST" duration-ms="64458" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P20000007@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Capita#2022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewRequestDisplay -->
+      </class> <!-- tests.finance_Approver_View_Requests.Finance_Approver_View_RequestPage -->
+      <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage">
+        <test-method signature="financeapproval(java.lang.String,java.lang.String)[pri:0, instance:tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage@2a798d51]" started-at="2022-12-02T14:18:58 IST" name="financeapproval" data-provider="getdata" finished-at="2022-12-02T14:20:00 IST" duration-ms="62176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P20000007@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Capita#2022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- financeapproval -->
+      </class> <!-- tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage -->
+      <class name="tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page">
+        <test-method signature="ITRequestcreation(java.lang.String,java.lang.String)[pri:0, instance:tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page@294425a7]" started-at="2022-12-02T14:15:37 IST" name="ITRequestcreation" data-provider="getdata" finished-at="2022-12-02T14:17:12 IST" duration-ms="95438" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P20000007@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Capita#2022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ITRequestcreation -->
+      </class> <!-- tests.finance_Approver_RequestRaised.Finance_Approver_RequestRaised_Page -->
+      <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage">
+        <test-method signature="functionalapproval(java.lang.String,java.lang.String)[pri:0, instance:tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage@6b81ce95]" started-at="2022-12-02T14:17:12 IST" name="functionalapproval" data-provider="getdata" finished-at="2022-12-02T14:18:58 IST" duration-ms="105904" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P20000006@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Capita#2022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- functionalapproval -->
+      </class> <!-- tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage -->
+    </test> <!-- FinanceRequestInitiateAndApproverWorkflow -->
+  </suite> <!-- Suite -->
+</testng-results>

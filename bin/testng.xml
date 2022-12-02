@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <!-- <test thread-count="5" name="Login">
+  <classes>
+  <class name="tests.login.LoginPage"/>
+ <class name="tests.ViewPages.ViewPage"/>
+  </classes>
+  </test> -->
+  
+  <!-- <test thread-count="5" name="ITRequestorWorkflow">
+  <classes>
+  <class name="tests.ITRequests.ITRequestPage"/>
+ <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  </classes>
+  </test> -->
+  
+  <!-- -->
+ <!-- <test thread-count="5" name="FunctionalRequestInitiateAndApproverWorkflow">
+  <classes>
+   <class name="tests.functional_Approver_RaisedRequests.FunctionalApprover_RaisedRequestPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/> 
+  </classes>
+  </test> -->
+  
+   <test thread-count="5" name="FinanceRequestInitiateAndApproverWorkflow">
+  <classes>
+   <class name="tests.Finance_Approver_RaisedRequests.FinanceApprover_RaisedRequestPage"/>
+  <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage"/>
+  <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
+  </classes>
+  </test>
+</suite> 
