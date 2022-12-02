@@ -28,15 +28,21 @@ public class DepartmentPage {
 		deptobbj.getadminmastertmenu();
 		deptobbj.getdepartmenttmenu();
 		deptobbj.getadddept();	
+		deptobbj.getdeptname();
+		deptobbj.getsubmitdept();
+		Thread.sleep(1000);
+		getactivepagination();
+		Thread.sleep(2000);
+		obj.ValidateLogout();
 	}
 	
-	public void getactivepagination() throws InterruptedException {
-		int paginationsize = driver.findElements(By.cssSelector("#tblActive_paginate>ul>li>a")).size();
+	public void getactivepagination() throws InterruptedException { 
+		int paginationsize = driver.findElements(By.cssSelector("#tblHeader_paginate>ul>li>a")).size();
 		if(paginationsize!=3)
 		{
 	   for(int i=1; i<=paginationsize;i++)
   		{
-		   String paginationselector = "#tblActive_paginate>ul>li:nth-child("+i+")>a";
+		   String paginationselector = "#tblHeader_paginate>ul>li:nth-child("+i+")>a";
 		   driver.findElement(By.cssSelector(paginationselector)).click();
 		   Thread.sleep(2000);
   		}

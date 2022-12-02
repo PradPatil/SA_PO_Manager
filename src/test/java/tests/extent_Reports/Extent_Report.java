@@ -12,11 +12,9 @@ public class Extent_Report {
 	reporter.config().setReportName("SA_PO Manager Automation Result");
 	reporter.config().setDocumentTitle("Test Results");
 	
-	ExtentReports extent = new ExtentReports ();
+	ExtentReports extent = new ExtentReports();
 	extent.attachReporter(reporter);
 	extent.setSystemInfo("Tester", "Pradnya Patil");
 	return extent;
 	}
-	
-
 }
