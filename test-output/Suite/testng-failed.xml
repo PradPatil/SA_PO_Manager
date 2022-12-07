@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="FunctionalRequestRejectionWorkflowForRequestRaisedByITRequestor(failed)">
+  <listeners>
+    <listener class-name="tests.extent_Reports.TestNGListeners"/>
+  </listeners>
+  <test thread-count="5" name="ITRequestorWorkflow(failed)">
     <classes>
-      <class name="tests.functional_Approver_RequestRejection.Functional_Approver_RequestRejectionPage">
+      <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage">
         <methods>
-          <include name="functionalRejection" invocation-numbers="0"/>
+          <include name="financeapproval" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.functional_Approver_RequestRejection.Functional_Approver_RequestRejectionPage -->
-      <class name="tests.ViewPages.ViewPage">
+      </class> <!-- tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage -->
+      <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage">
         <methods>
-          <include name="ViewRequestDisplay" invocation-numbers="0"/>
+          <include name="functionalPOapproval" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.ViewPages.ViewPage -->
+      </class> <!-- tests.functional_PO_Approvals.Functional_PO_ApprovalPage -->
+      <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage">
+        <methods>
+          <include name="functionalapproval" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage -->
+      <class name="tests.ITRequests.ITRequestPage">
+        <methods>
+          <include name="ITRequestcreation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.ITRequests.ITRequestPage -->
     </classes>
-  </test> <!-- FunctionalRequestRejectionWorkflowForRequestRaisedByITRequestor(failed) -->
+  </test> <!-- ITRequestorWorkflow(failed) -->
 </suite> <!-- Failed suite [Suite] -->

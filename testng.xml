@@ -4,13 +4,13 @@
 <listeners>
 <listener class-name="tests.extent_Reports.TestNGListeners"/>
 </listeners>
- <!--  -->
+<!--
  <test thread-count="5" name="Login">
   <classes>
   <class name="tests.login.LoginPage"/>
-<!-- <class name="tests.ViewPages.ViewPage"/>-->
+<class name="tests.ViewPages.ViewPage"/>
   </classes>
-  </test>
+  </test> -->
   
  <!-- 
  <test thread-count="5" name="ITRequestorWorkflow">
@@ -148,11 +148,21 @@
   </classes>
   </test> -->
   
-  <!--
- <test thread-count="5" name="AdminConfiguration">
+  <!-- 
+ <test thread-count="5" name="AdminConfigurationForDept">
   <classes>
-  
+  <class name="adminConfigurationTests.department.AddDepartmentPage"/>
+  <class name="adminConfigurationTests.department.DeleteDepartmentPage"/> 
+  <class name="adminConfigurationTests.department.EditDepartmentPage"/> 
   </classes>
   </test> -->
+ <!--
+  <test thread-count="5" name="AdminConfigurationForRoles">
+  <classes>
+  <class name="adminConfigurationTests.roles.AddRolesPage"/>
+  <class name="adminConfigurationTests.roles.DeleteRolesPage"/> 
+  <class name="adminConfigurationTests.roles.EditRolesPage"/> 
+  </classes>
+  </test>  -->
 </suite> 
 

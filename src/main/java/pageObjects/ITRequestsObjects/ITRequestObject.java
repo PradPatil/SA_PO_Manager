@@ -143,7 +143,7 @@ public class ITRequestObject {
 		driver.findElement(Assets).click();
 	}
 
-	public void getPartCode() {
+	public void getPartCode() { 
 		driver.findElement(PartCode).sendKeys("P-123");
 	}
 

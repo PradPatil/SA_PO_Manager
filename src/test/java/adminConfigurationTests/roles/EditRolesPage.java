@@ -1,4 +1,4 @@
-package adminConfigurationTests.department;
+package adminConfigurationTests.roles;
 
 import java.io.IOException;
 
@@ -8,14 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import adminConfigurationObjects.departmentObjects.DepartmentObject;
+import adminConfigurationObjects.rolesObjects.EditRolesObject;
 import tests.login.LoginPage;
 
-public class DepartmentPage {
+public class EditRolesPage {
 	
 	public JavascriptExecutor js;
 	public WebDriver driver;
-	public DepartmentObject deptobbj;
+	public EditRolesObject roleobj;
 	
 	@Test (dataProvider="getdata")
 	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
@@ -23,17 +23,30 @@ public class DepartmentPage {
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
 		driver = obj.driver;
-		deptobbj = new DepartmentObject(driver);
+		roleobj = new EditRolesObject(driver);
 		Thread.sleep(1000);
-		deptobbj.getadminmastertmenu();
-		deptobbj.getdepartmenttmenu();
-		deptobbj.getadddept();	
-		deptobbj.getdeptname();
-		deptobbj.getsubmitdept();
-		Thread.sleep(1000);
+		roleobj.getadminmastertmenu();
+		Thread.sleep(2000);
+		roleobj.getrolemenu();
+		Thread.sleep(2000);
 		getactivepagination();
 		Thread.sleep(2000);
+		roleobj.getlastrowscroll();
+		Thread.sleep(1000);
+		String RoleNameText = roleobj.getrolename();
+		System.out.println("Department Added:" +RoleNameText);
+		roleobj.geteditrole();
+		Thread.sleep(1000);
+		roleobj.getActiveCheckbox();
+		Thread.sleep(1000);
+		roleobj.getsubmitrole();
+		Thread.sleep(1000);
+		roleobj.getdisplaymsg();
+		Thread.sleep(1000);
+		roleobj.getSearchRole(RoleNameText);
+		Thread.sleep(2000);
 		obj.ValidateLogout();
+		driver.quit();
 	}
 	
 	public void getactivepagination() throws InterruptedException { 
@@ -56,5 +69,4 @@ public class DepartmentPage {
         data[0][1]="Welcome^123";
         return data;
 	}
-
 }
