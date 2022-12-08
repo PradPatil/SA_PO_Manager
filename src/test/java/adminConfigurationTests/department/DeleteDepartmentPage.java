@@ -20,7 +20,7 @@ public class DeleteDepartmentPage {
 	public String deptNameText = "";
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void deletedepartment(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

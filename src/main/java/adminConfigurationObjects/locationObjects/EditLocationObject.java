@@ -1,4 +1,4 @@
-package adminConfigurationObjects.departmentObjects;
+package adminConfigurationObjects.locationObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,42 +6,41 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class EditDepartmentObject {
+public class EditLocationObject {
 
 	public WebDriver driver;
 
-	public EditDepartmentObject(WebDriver driver) {
+	public EditLocationObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	By adminmastermenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/a");
-	By departmentmenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/ul/li[25]/a");
-	By editdeptclick = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[4]/a[1]");
+	By locationmenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/ul/li[25]/a");
+	By editlocationclick = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[4]/a[1]");
 	By Activecheckbox = By.xpath("//*[@id=\"chkActive\"]");
-	By submitdept = By.xpath("//*[@id=\"myModal\"]/div/div/div[3]/button[2]");
+	By submitloc = By.xpath("//*[@id=\"myModal\"]/div/div/div[3]/button[2]");
 	By okpopup = By.xpath("//*[@id=\"DisplayMsgbtnOk\"]");
 	By searchinput = By.xpath("//*[@id=\"tblHeader_filter\"]/label/input");
-	By deptvalue = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[2]");
+	By locvalue = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[2]");
 	
 	public void getadminmastertmenu() {
 		driver.findElement(adminmastermenu).click();
 	}
 	
-	public void getdepartmenttmenu() {
+	public void getlocationmenu() {
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(departmentmenu)).click().build().perform();
+		action.moveToElement(driver.findElement(locationmenu)).click().build().perform();
 	}
 	
-	public void geteditdept() {
-		driver.findElement(editdeptclick).click();
+	public void geteditloc() {
+		driver.findElement(editlocationclick).click();
 	}
 	
 	public void getActiveCheckbox() {
-		//driver.findElement(Activecheckbox).click();
-		driver.findElement(Activecheckbox);
+		driver.findElement(Activecheckbox).click();
 	}
-	public void getsubmitdept() {
-		driver.findElement(submitdept).click();
+	public void getsubmitloc() {
+		driver.findElement(submitloc).click();
 	}
 	
 	public void getdisplaymsg() {
@@ -54,12 +53,12 @@ public class EditDepartmentObject {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementH);
 	}
 
-	public String getdeptname() {
-		String deptNameText = driver.findElement(deptvalue).getText();
-		return deptNameText;
+	public String getlocname() {
+		String locNameText = driver.findElement(locvalue).getText();
+		return locNameText;
 	}
-	public void getSearchDept(String deptNameText) {
+	public void getSearchLoc(String locNameText) {
         driver.findElement(searchinput).click();
-        driver.findElement(searchinput).sendKeys(deptNameText);
+        driver.findElement(searchinput).sendKeys(locNameText);
     }
 }

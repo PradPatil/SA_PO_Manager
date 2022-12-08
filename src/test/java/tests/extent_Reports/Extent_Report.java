@@ -6,8 +6,7 @@ public class Extent_Report {
 	
 	public static ExtentReports getReportObject()
 	{
-	
-	String Path = System.getProperty("user.dir") + "\\reports\\index.html";
+	String Path = System.getProperty("user.dir")+"\\reports\\ExtentReport.html";
 	ExtentSparkReporter reporter = new ExtentSparkReporter(Path);
 	reporter.config().setReportName("SA_PO Manager Automation Result");
 	reporter.config().setDocumentTitle("Test Results");

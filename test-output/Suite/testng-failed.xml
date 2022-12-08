@@ -4,28 +4,13 @@
   <listeners>
     <listener class-name="tests.extent_Reports.TestNGListeners"/>
   </listeners>
-  <test thread-count="5" name="ITRequestorWorkflow(failed)">
+  <test thread-count="5" name="Login(failed)">
     <classes>
-      <class name="tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage">
+      <class name="tests.ViewPages.ViewPage">
         <methods>
-          <include name="financeapproval" invocation-numbers="0"/>
+          <include name="ViewRequestDisplay" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage -->
-      <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage">
-        <methods>
-          <include name="functionalPOapproval" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- tests.functional_PO_Approvals.Functional_PO_ApprovalPage -->
-      <class name="tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage">
-        <methods>
-          <include name="functionalapproval" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage -->
-      <class name="tests.ITRequests.ITRequestPage">
-        <methods>
-          <include name="ITRequestcreation" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- tests.ITRequests.ITRequestPage -->
+      </class> <!-- tests.ViewPages.ViewPage -->
     </classes>
-  </test> <!-- ITRequestorWorkflow(failed) -->
+  </test> <!-- Login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,4 +1,4 @@
-package adminConfigurationTests.department;
+package adminConfigurationTests.location;
 
 import java.io.IOException;
 
@@ -8,42 +8,43 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import adminConfigurationObjects.departmentObjects.EditDepartmentObject;
+import adminConfigurationObjects.locationObjects.DeleteLocationObject;
 import tests.login.LoginPage;
 
-public class EditDepartmentPage {
+public class DeleteLocationPage {
+
 	
 	public JavascriptExecutor js;
 	public WebDriver driver;
-	public EditDepartmentObject deptobj;
+	public DeleteLocationObject locobj;
+	public String locNameText = "";
 	
 	@Test (dataProvider="getdata")
-	public void editdepartment(String username,String password) throws IOException, InterruptedException
+	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
 		driver = obj.driver;
-		deptobj = new EditDepartmentObject(driver);
+		locobj = new DeleteLocationObject(driver);
 		Thread.sleep(1000);
-		deptobj.getadminmastertmenu();
-		Thread.sleep(2000);
-		deptobj.getdepartmenttmenu();
-		Thread.sleep(2000);
+		locobj.getadminmastertmenu();
+		Thread.sleep(1000);
+		locobj.getlocationmenu();
+		Thread.sleep(1000);
+		getactivepagination();
+		locobj.getlastrowscroll();
+		Thread.sleep(1000);
+		locobj.getdeleteloc();	
+		Thread.sleep(1000);
+		locobj.getlocdeleteyes();
+		Thread.sleep(1000);
+		locobj.getdisplaymsg();
+		Thread.sleep(1000);
 		getactivepagination();
 		Thread.sleep(2000);
-		deptobj.getlastrowscroll();
-		Thread.sleep(1000);
-		String deptNameText = deptobj.getdeptname();
-		System.out.println("Department Added:" +deptNameText);
-		deptobj.geteditdept();
-		Thread.sleep(1000);
-		deptobj.getActiveCheckbox();
-		Thread.sleep(1000);
-		deptobj.getsubmitdept();
-		Thread.sleep(1000);
-		deptobj.getdisplaymsg();
-		Thread.sleep(1000);
-		deptobj.getSearchDept(deptNameText);
+		String locNameText = locobj.getlocname();
+		System.out.println("Department Deleted:" +locNameText);
+		locobj.getSearchLoc(locNameText);
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();
@@ -69,4 +70,5 @@ public class EditDepartmentPage {
         data[0][1]="Welcome^123";
         return data;
 	}
+
 }

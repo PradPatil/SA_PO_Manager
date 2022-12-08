@@ -1,4 +1,4 @@
-package adminConfigurationTests.department;
+package adminConfigurationTests.location;
 
 import java.io.IOException;
 
@@ -8,42 +8,42 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import adminConfigurationObjects.departmentObjects.EditDepartmentObject;
+import adminConfigurationObjects.locationObjects.EditLocationObject;
 import tests.login.LoginPage;
 
-public class EditDepartmentPage {
+public class EditLocationPage {
 	
 	public JavascriptExecutor js;
 	public WebDriver driver;
-	public EditDepartmentObject deptobj;
+	public EditLocationObject locobj;
 	
 	@Test (dataProvider="getdata")
-	public void editdepartment(String username,String password) throws IOException, InterruptedException
+	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
 		driver = obj.driver;
-		deptobj = new EditDepartmentObject(driver);
+		locobj = new EditLocationObject(driver);
 		Thread.sleep(1000);
-		deptobj.getadminmastertmenu();
+		locobj.getadminmastertmenu();
 		Thread.sleep(2000);
-		deptobj.getdepartmenttmenu();
+		locobj.getlocationmenu();
 		Thread.sleep(2000);
 		getactivepagination();
 		Thread.sleep(2000);
-		deptobj.getlastrowscroll();
+		locobj.getlastrowscroll();
 		Thread.sleep(1000);
-		String deptNameText = deptobj.getdeptname();
-		System.out.println("Department Added:" +deptNameText);
-		deptobj.geteditdept();
+		String locNameText = locobj.getlocname();
+		System.out.println("Department Added:" +locNameText);
+		locobj.geteditloc();
 		Thread.sleep(1000);
-		deptobj.getActiveCheckbox();
+		locobj.getActiveCheckbox();
 		Thread.sleep(1000);
-		deptobj.getsubmitdept();
+		locobj.getsubmitloc();
 		Thread.sleep(1000);
-		deptobj.getdisplaymsg();
+		locobj.getdisplaymsg();
 		Thread.sleep(1000);
-		deptobj.getSearchDept(deptNameText);
+		locobj.getSearchLoc(locNameText);
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();

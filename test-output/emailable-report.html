@@ -9,38 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">ITRequestorWorkflow</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">285,182</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Login</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">42,351</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ITRequestorWorkflow &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.ITRequests.ITRequestPage</td><td><a href="#m0">ITRequestcreation</a></td><td rowspan="1">1670396413684</td><td rowspan="1">41108</td></tr><tr class="failedodd"><td rowspan="1">tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage</td><td><a href="#m1">financeapproval</a></td><td rowspan="1">1670396508351</td><td rowspan="1">59278</td></tr><tr class="failedeven"><td rowspan="1">tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage</td><td><a href="#m2">functionalapproval</a></td><td rowspan="1">1670396454944</td><td rowspan="1">53280</td></tr><tr class="failedodd"><td rowspan="1">tests.functional_PO_Approvals.Functional_PO_ApprovalPage</td><td><a href="#m3">functionalPOapproval</a></td><td rowspan="1">1670396567780</td><td rowspan="1">60421</td></tr><tr><th colspan="4">ITRequestorWorkflow &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.ViewPages.ViewPage</td><td><a href="#m4">ViewRequestDisplay</a></td><td rowspan="1">1670396628328</td><td rowspan="1">70484</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.ViewPages.ViewPage</td><td><a href="#m0">ViewRequestDisplay</a></td><td rowspan="1">1670493600752</td><td rowspan="1">42026</td></tr></tbody>
 </table>
-<h2>ITRequestorWorkflow</h2><h3 id="m0">tests.ITRequests.ITRequestPage#ITRequestcreation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000001@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-default pull-left btn-color&quot; id=&quot;btnAdd&quot;&gt;...&lt;/button&gt; is not clickable at point (314, 257). Other element would receive the click: &lt;div class=&quot;modal fade in&quot; id=&quot;myModal&quot; data-backdrop=&quot;static&quot; data-keyboard=&quot;false&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;.modal&quot; style=&quot;display: block; padding-right: 17px;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=107.0.5304.122)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LMP2NXTHTTFF63&apos;, ip: &apos;10.208.28.155&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2aa6bb252f9396b7ecaa0402ff2f1067
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.ITRequestsObjects.ITRequestObject.getsoftAddBtn(ITRequestObject.java:168)
-	at tests.ITRequests.ITRequestPage.ITRequestcreation(ITRequestPage.java:52)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage#financeapproval</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000007@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblActive&apos;]/tbody/tr[last()]/td[10]/a&quot;}
+<h2>Login</h2><h3 id="m0">tests.ViewPages.ViewPage#ViewRequestDisplay</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000001@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;ul-menus&apos;]/li[2]/ul/li[4]/a&quot;}
   (Session info: chrome=107.0.5304.122)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LMP2NXTHTTFF63&apos;, ip: &apos;10.208.28.155&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4827ec3f69806a4f3d189e83c1f3b708
-*** Element info: {Using=xpath, value=//*[@id=&apos;tblActive&apos;]/tbody/tr[last()]/td[10]/a}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88da3b76af97927b3949af84d07ea146
+*** Element info: {Using=xpath, value=//*[@id=&apos;ul-menus&apos;]/li[2]/ul/li[4]/a}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -51,43 +32,9 @@ Session ID: 4827ec3f69806a4f3d189e83c1f3b708
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.financeApprover_RequestApprovalObjects.Finance_Approver_Request_ApprovalObject.getactionclick(Finance_Approver_Request_ApprovalObject.java:47)
-	at tests.financeApprover_RequestApprovals.Finance_Approver_Request_ApprovalPage.financeapproval(Finance_Approver_Request_ApprovalPage.java:38)
+	at pageObjects.ViewPageObjects.ViewPageObject.getViewRequestmenu(ViewPageObject.java:30)
+	at tests.ViewPages.ViewPage.ViewRequestDisplay(ViewPage.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage#functionalapproval</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000006@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblActive&apos;]/tbody/tr[last()]/td[12]/a&quot;}
-  (Session info: chrome=107.0.5304.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LMP2NXTHTTFF63&apos;, ip: &apos;10.208.28.155&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54624}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f9576cc1d985963a6003f849fd39488b
-*** Element info: {Using=xpath, value=//*[@id=&apos;tblActive&apos;]/tbody/tr[last()]/td[12]/a}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.functionalApprover_RequestApprovalObjects.FunctionalApprover_RequestApprovalObject.getselectquotationcolumn(FunctionalApprover_RequestApprovalObject.java:57)
-	at tests.functionalApprover_RequestApprovals.Functional_Approver_Request_ApprovalPage.functionalapproval(Functional_Approver_Request_ApprovalPage.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.functional_PO_Approvals.Functional_PO_ApprovalPage#functionalPOapproval</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000006@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Approved by Functional PO Approver
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LMP2NXTHTTFF63&apos;, ip: &apos;10.208.28.155&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at pageObjects.functional_PO_ApprovalObjects.Functional_PO_ApprovalObject.getfunctionalPOapprovaldropdownaction(Functional_PO_ApprovalObject.java:63)
-	at tests.functional_PO_Approvals.Functional_PO_ApprovalPage.functionalPOapproval(Functional_PO_ApprovalPage.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.ViewPages.ViewPage#ViewRequestDisplay</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>P20000001@capitaindia.onmicrosoft.com</td><td>Capita#2022</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

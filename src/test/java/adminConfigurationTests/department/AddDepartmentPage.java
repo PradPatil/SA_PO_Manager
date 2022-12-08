@@ -17,7 +17,7 @@ public class AddDepartmentPage {
 	public AddDepartmentObject deptobj;
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void adddepartment(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

@@ -4,15 +4,15 @@
 <listeners>
 <listener class-name="tests.extent_Reports.TestNGListeners"/>
 </listeners>
-<!--
+
  <test thread-count="5" name="Login">
   <classes>
-  <class name="tests.login.LoginPage"/>
+ <!-- <class name="tests.login.LoginPage"/> -->
 <class name="tests.ViewPages.ViewPage"/>
   </classes>
-  </test> -->
+  </test> 
   
- <!-- 
+ <!--
  <test thread-count="5" name="ITRequestorWorkflow">
   <classes>
   <class name="tests.ITRequests.ITRequestPage"/>
@@ -21,7 +21,7 @@
   <class name="tests.functional_PO_Approvals.Functional_PO_ApprovalPage"/>
   <class name="tests.ViewPages.ViewPage"/> 
   </classes>
-  </test>-->
+  </test> -->
   
   <!--
   <test thread-count="5" name="FunctionalRequestInitiateAndApproverWorkflow">
@@ -54,14 +54,14 @@
   </classes>
   </test> -->
   
- <!--  
+ <!--
  <test thread-count="5" name="FunctionalRequestRejectionWorkflowForRequestRaisedByITRequestor">
   <classes>
   <class name="tests.ITRequests.ITRequestPage"/>
  <class name="tests.functional_Approver_RequestRejection.Functional_Approver_RequestRejectionPage"/>
   <class name="tests.ViewPages.ViewPage"/>
   </classes>
-  </test> -->
+  </test>   -->
   
   <!-- 
   <test thread-count="5" name="FinanceRequestRejectionrWorkflowForRequestRaisedByITRequestor">
@@ -148,14 +148,14 @@
   </classes>
   </test> -->
   
-  <!-- 
+  <!--  
  <test thread-count="5" name="AdminConfigurationForDept">
   <classes>
   <class name="adminConfigurationTests.department.AddDepartmentPage"/>
   <class name="adminConfigurationTests.department.DeleteDepartmentPage"/> 
   <class name="adminConfigurationTests.department.EditDepartmentPage"/> 
   </classes>
-  </test> -->
+  </test>-->
  <!--
   <test thread-count="5" name="AdminConfigurationForRoles">
   <classes>
@@ -164,5 +164,13 @@
   <class name="adminConfigurationTests.roles.EditRolesPage"/> 
   </classes>
   </test>  -->
+   <!--  
+  <test thread-count="5" name="AdminConfigurationForLocation">
+  <classes>
+  <class name="adminConfigurationTests.roles.AddLocationPage"/>
+  <class name="adminConfigurationTests.roles.DeleteLocationPage"/> 
+  <class name="adminConfigurationTests.roles.EditLocationPage"/> 
+  </classes>
+  </test> -->
 </suite> 
 

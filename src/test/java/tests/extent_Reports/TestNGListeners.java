@@ -1,5 +1,7 @@
 package tests.extent_Reports;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -10,6 +12,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class TestNGListeners extends Extent_Screenshot implements ITestListener{
+	
+	//public WebDriver driver;
+	String screenShotpath=null;
+	//public static String testcaseName=null;
 	
 	ExtentTest test;
 	ExtentReports extent = Extent_Report.getReportObject();
@@ -31,10 +37,11 @@ public class TestNGListeners extends Extent_Screenshot implements ITestListener{
     }		
 
    // @Override		
-    public void onTestFailure(ITestResult result) {					
-        extenttest.get().fail(result.getThrowable());
+    public void onTestFailure(ITestResult result)
+    {					
+       /* extenttest.get().fail(result.getThrowable());
         WebDriver driver=null;
-        String testcasename = result.getMethod().getMethodName();
+        String testmethodname = result.getMethod().getMethodName();
         try {
             driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
             System.out.println("driver : "+driver);
@@ -44,12 +51,26 @@ public class TestNGListeners extends Extent_Screenshot implements ITestListener{
         }
         try {
             //we attached screenshot to report extent
-        	extenttest.get().addScreenCaptureFromPath(getscreenshot(testcasename,driver), result.getMethod().getMethodName());
+        	extenttest.get().addScreenCaptureFromPath(getscreenshot(testmethodname,driver), result.getMethod().getMethodName());
             System.out.println("ScreenShot Captured");
             
         } catch (Exception e) {
             System.out.println("error : "+e.getMessage());
-        }
+        }*/
+    	test.log(Status.FAIL, "Test Failed");
+    	extenttest.get().fail(result.getThrowable());
+    	 WebDriver driver=null;
+        //String testmethodname = result.getMethod().getMethodName();
+    	try {
+			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+			//String screenShotpath = null;
+			screenShotpath = getscreenshot(result.getMethod().getMethodName(),driver);
+			
+		} catch (IOException | IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		}
+    	extenttest.get().addScreenCaptureFromPath(screenShotpath, result.getMethod().getMethodName());
+    	System.out.println("ScreenShot Captured");
     }		
 
    // @Override		
