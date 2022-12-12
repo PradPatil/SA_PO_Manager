@@ -18,7 +18,7 @@ public class Admin_New_Request_Page {
 	public Admin_New_RequestObject ITReqObj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void AdminNewRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

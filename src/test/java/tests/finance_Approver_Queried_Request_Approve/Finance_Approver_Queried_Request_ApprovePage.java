@@ -19,7 +19,7 @@ public class Finance_Approver_Queried_Request_ApprovePage {
 	Finance_Approver_QueriedRequest_ApproveObject obj1;
 	
 	@Test (dataProvider="getdata")
-	public void financeapproval(String username,String password) throws IOException, InterruptedException
+	public void FinanceApprovalQueryApprove(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

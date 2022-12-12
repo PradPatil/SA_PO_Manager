@@ -18,7 +18,7 @@ public class Finance_Approver_Request_ApprovalPage {
 	public String requestIDtext ="";
 	
 	@Test (dataProvider="getdata")
-	public void financeapproval(String username,String password) throws IOException, InterruptedException
+	public void FinanceRequestApproval(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

@@ -29,7 +29,7 @@ public class DeleteDepartmentPage {
 		Thread.sleep(1000);
 		deptobj.getadminmastertmenu();
 		Thread.sleep(1000);
-		deptobj.getdepartmenttmenu();
+		deptobj.getdepartmentmenu();
 		Thread.sleep(1000);
 		getactivepagination();
 		deptobj.getlastrowscroll();
@@ -41,10 +41,10 @@ public class DeleteDepartmentPage {
 		deptobj.getdisplaymsg();
 		Thread.sleep(1000);
 		getactivepagination();
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		String deptNameText = deptobj.getdeptname();
 		System.out.println("Department Deleted:" +deptNameText);
-		deptobj.getSearchDept(deptNameText);
+		deptobj.getSearchDept(deptNameText);*/
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();

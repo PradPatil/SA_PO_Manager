@@ -18,7 +18,7 @@ public class EditRolesPage {
 	public EditRolesObject roleobj;
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void editRole(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -34,7 +34,7 @@ public class EditRolesPage {
 		roleobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String RoleNameText = roleobj.getrolename();
-		System.out.println("Department Added:" +RoleNameText);
+		System.out.println("Role Edited:" +RoleNameText);
 		roleobj.geteditrole();
 		Thread.sleep(1000);
 		roleobj.getActiveCheckbox();

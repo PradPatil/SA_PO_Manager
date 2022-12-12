@@ -16,7 +16,7 @@ public class AddLocationPage {
 	public AddLocationObject locobj;
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void addlocation(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -25,22 +25,31 @@ public class AddLocationPage {
 		Thread.sleep(1000);
 		locobj.getadminmastertmenu();
 		Thread.sleep(2000);
-		locobj.getlocationmenttmenu();
+		locobj.getlocationmenu();
 		Thread.sleep(2000);
 		locobj.getaddlocoption();	
 		Thread.sleep(2000);
 		locobj.getaddloc();
+		locobj.getaddCompanyName();
+		locobj.getaddaddress1();
+		locobj.getaddaddress2();
+		locobj.getaddCountry();
+		locobj.getaddState();
+		locobj.getaddCity();
+		locobj.getaddPostalCode();
+		locobj.getaddContactNo();
+		//locobj.getaddActiveCheckbox(); // Comment out this line of code if you want to keep the location false (Not Active)
 		Thread.sleep(2000);
 		locobj.getsubmitloc();
 		Thread.sleep(1000);
 		locobj.getdisplaymsg();
 		getactivepagination();
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		locobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String locNameText = locobj.getlocname();
-		System.out.println("Department Added:" +locNameText);
-		locobj.getSearchLoc(locNameText);
+		System.out.println("Location Added:" +locNameText);
+		locobj.getSearchLoc(locNameText);*/
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="adminConfigurationTests.department.EditDepartmentPage">
+      <class name="adminConfigurationTests.reports.ReportsPage">
         <methods>
-          <include name="ViewRequestDisplay" invocation-numbers="0"/>
+          <include name="addRole" invocation-numbers="0"/>
         </methods>
-      </class> <!-- adminConfigurationTests.department.EditDepartmentPage -->
+      </class> <!-- adminConfigurationTests.reports.ReportsPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

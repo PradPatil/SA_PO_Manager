@@ -19,7 +19,7 @@ public class Functional_PO_ApprovalPage {
 	public int lastRowcount;
 
 	@Test(dataProvider = "getdata")
-	public void functionalPOapproval(String username, String password) throws IOException, InterruptedException {
+	public void FunctionalPOApproval(String username, String password) throws IOException, InterruptedException {
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username, password);
 		driver = obj.driver;

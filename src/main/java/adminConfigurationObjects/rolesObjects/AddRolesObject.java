@@ -19,7 +19,7 @@ public class AddRolesObject {
 	By adminmastermenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/a");
 	By rolemenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/ul/li[1]/a");
 	By addnewrole = By.xpath("//*[@id=\"btnAdd\"]");
-	By rolenameinput = By.xpath("//*[@id=\"txtDept\"]");
+	By rolenameinput = By.xpath("//*[@id=\"txtRole\"]");
 	By submitrole = By.xpath("//*[@id=\"myModal\"]/div/div/div[3]/button[2]");
 	By okpopup = By.xpath("//*[@id=\"DisplayMsgbtnOk\"]");
 	By closedeptpopup = By.xpath("//*[@id=\"myModal\"]/div/div/div[3]/button[1]");

@@ -18,7 +18,7 @@ public class Admin_View_Request_Page {
 	public Admin_View_RequestObject ViewObj;
 
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void AdminViewRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

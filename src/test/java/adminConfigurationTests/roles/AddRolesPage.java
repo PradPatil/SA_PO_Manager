@@ -17,7 +17,7 @@ public class AddRolesPage {
 	public AddRolesObject roleobj;
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void addRole(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -37,11 +37,11 @@ public class AddRolesPage {
 		roleobj.getdisplaymsg();
 		getactivepagination();
 		Thread.sleep(2000);
-		roleobj.getlastrowscroll();
+		/*roleobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String RoleNameText = roleobj.getrolename();
-		System.out.println("Department Added:" +RoleNameText);
-		roleobj.getSearchRole(RoleNameText);
+		System.out.println("Role Added:" +RoleNameText);
+		roleobj.getSearchRole(RoleNameText);*/
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();

@@ -19,7 +19,7 @@ public class Finance_Approver_ModifyRequestPage {
 	public Finance_Approver_ModifyRequestObject ITReqObj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void FinanceApprover_ModifyRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

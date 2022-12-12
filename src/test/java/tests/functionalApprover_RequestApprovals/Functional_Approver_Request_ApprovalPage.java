@@ -18,7 +18,7 @@ public class Functional_Approver_Request_ApprovalPage {
 	public String requestIDtext ="";
 	
 	@Test (dataProvider="getdata")
-	public void functionalapproval(String username,String password) throws IOException, InterruptedException
+	public void FunctionalApproverRequestApproval(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

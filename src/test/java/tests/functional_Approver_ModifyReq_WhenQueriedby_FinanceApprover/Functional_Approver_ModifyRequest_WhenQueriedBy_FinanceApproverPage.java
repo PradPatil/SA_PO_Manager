@@ -19,7 +19,7 @@ public class Functional_Approver_ModifyRequest_WhenQueriedBy_FinanceApproverPage
 	public Functional_Approver_ModifyReq_WhenQueriedBy_FinanceApproverObject ITReqObj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void FunctionalModifyQueriedRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

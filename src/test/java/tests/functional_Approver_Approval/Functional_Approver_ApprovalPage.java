@@ -19,7 +19,7 @@ public class Functional_Approver_ApprovalPage {
 	public Functional_Approver_ApprovedObject ITReqObj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void FunctionalApprove(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

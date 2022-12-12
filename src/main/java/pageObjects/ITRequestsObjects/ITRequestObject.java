@@ -104,6 +104,7 @@ public class ITRequestObject {
 	By Searchinput = By.xpath("//*[@id='tblActive_filter']/label/input");
 
 	public void getITRequestmenu() {
+		//return driver.findElement(ITRequestmenu);
 		driver.findElement(ITRequestmenu).click();
 	}
 
@@ -208,9 +209,9 @@ public class ITRequestObject {
 
 	// Add attachment section - Choose/Upload File
 	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+		//driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
 		//driver.findElement(uploadfile).sendKeys(("user.dir") + "//SA_PO_Manager-master//Documents//Help Document.pdf");
-		//driver.findElement(uploadfile).sendKeys(("user.dir") + "\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+		driver.findElement(uploadfile).sendKeys(("user.dir") + "Documents\\Help Document.pdf");
 		
 	}
 	public void getRemark() {

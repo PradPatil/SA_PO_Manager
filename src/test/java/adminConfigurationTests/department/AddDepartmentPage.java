@@ -9,12 +9,14 @@ import org.testng.annotations.Test;
 
 import adminConfigurationObjects.departmentObjects.AddDepartmentObject;
 import tests.login.LoginPage;
+import utils.AllWaitsScript;
 
 public class AddDepartmentPage {
 	
 	public JavascriptExecutor js;
 	public WebDriver driver;
 	public AddDepartmentObject deptobj;
+	public AllWaitsScript waitobj;
 	
 	@Test (dataProvider="getdata")
 	public void adddepartment(String username,String password) throws IOException, InterruptedException
@@ -23,10 +25,13 @@ public class AddDepartmentPage {
 		obj.validateLogin(username,password);
 		driver = obj.driver;
 		deptobj = new AddDepartmentObject(driver);
-		Thread.sleep(1000);
+		Thread.sleep(1000);	
+		/*waitobj = new AllWaitsScript();
+		waitobj.elementvisible(deptobj.getadminmastertmenu());
+		deptobj.getadminmastertmenu().click();*/	
 		deptobj.getadminmastertmenu();
 		Thread.sleep(2000);
-		deptobj.getdepartmenttmenu();
+		deptobj.getdepartmentmenu();
 		Thread.sleep(2000);
 		deptobj.getadddeptoption();	
 		Thread.sleep(2000);
@@ -36,12 +41,12 @@ public class AddDepartmentPage {
 		Thread.sleep(1000);
 		deptobj.getdisplaymsg();
 		getactivepagination();
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		deptobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String deptNameText = deptobj.getdeptname();
 		System.out.println("Department Added:" +deptNameText);
-		deptobj.getSearchDept(deptNameText);
+		deptobj.getSearchDept(deptNameText);*/
 		Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();

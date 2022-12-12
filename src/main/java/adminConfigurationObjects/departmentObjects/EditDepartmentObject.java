@@ -27,7 +27,7 @@ public class EditDepartmentObject {
 		driver.findElement(adminmastermenu).click();
 	}
 	
-	public void getdepartmenttmenu() {
+	public void getdepartmentmenu() {
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(departmentmenu)).click().build().perform();
 	}

@@ -27,10 +27,11 @@ public class AddDepartmentObject {
 	By deptvalue = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[2]");
 	
 	public void getadminmastertmenu() {
-		driver.findElement(adminmastermenu).click();
+		//return driver.findElement(adminmastermenu);
+		driver.findElement(adminmastermenu).click();;
 	}
 	
-	public void getdepartmenttmenu() {
+	public void getdepartmentmenu() {
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(departmentmenu)).click().build().perform();
 	}

@@ -1,6 +1,7 @@
 package tests.login;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -20,9 +21,11 @@ public class LoginPage extends Base{
 	public void validateLogin(String username,String password) throws IOException, InterruptedException
 	{
 		driver =initializeDriver();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		obj = new LoginObject(driver);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		obj.getUserName(username);
+		Thread.sleep(1000);
 		obj.getNextBtn();
 		Thread.sleep(3000);
 		obj.getPassword(password);

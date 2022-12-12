@@ -16,7 +16,7 @@ public class DeleteLocationObject {
 
 	By adminmastermenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/a");
 	By locationmenu = By.xpath("//*[@id=\"ul-menus\"]/li[2]/ul/li[17]/a");
-	By deleteloc = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[4]/a[2]");
+	By deleteloc = By.xpath("//*[@id=\"tblData\"]/tr[last()]/td[12]/a[2]");
 	By deleteconfirm = By.xpath("//*[@id=\"delete-confirm\"]");
 	By deletecancel = By.xpath("//*[@id=\"mb-delete\"]/div/div/div[3]/button[2]");
 	By okpopup = By.xpath("//*[@id=\"DisplayMsgbtnOk\"]");

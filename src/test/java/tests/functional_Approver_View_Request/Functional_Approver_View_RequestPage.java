@@ -18,7 +18,7 @@ public class Functional_Approver_View_RequestPage {
 	public Functional_Approver_View_RequestObject ViewObj;
 
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void FuntionalApproverViewRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

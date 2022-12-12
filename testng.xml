@@ -4,13 +4,13 @@
 <listeners>
 <listener class-name="tests.extent_Reports.TestNGListeners"/>
 </listeners>
-
+ <!--
  <test thread-count="5" name="Login">
   <classes>
- <!-- <class name="tests.login.LoginPage"/> -->
-<class name="tests.ViewPages.ViewPage"/>
+<class name="tests.login.LoginPage"/> 
+ <class name="tests.ViewPages.ViewPage"/>
   </classes>
-  </test> 
+  </test> -->
   
  <!--
  <test thread-count="5" name="ITRequestorWorkflow">
@@ -164,13 +164,27 @@
   <class name="adminConfigurationTests.roles.EditRolesPage"/> 
   </classes>
   </test>  -->
-   <!--  
+    <!--
   <test thread-count="5" name="AdminConfigurationForLocation">
   <classes>
-  <class name="adminConfigurationTests.roles.AddLocationPage"/>
-  <class name="adminConfigurationTests.roles.DeleteLocationPage"/> 
-  <class name="adminConfigurationTests.roles.EditLocationPage"/> 
+  <class name="adminConfigurationTests.location.AddLocationPage"/>
+  <class name="adminConfigurationTests.location.DeleteLocationPage"/> 
+  <class name="adminConfigurationTests.location.EditLocationPage"/>
   </classes>
   </test> -->
+   <!--
+  <test thread-count="5" name="AdminConfigurationForItem">
+  <classes>
+  <class name="adminConfigurationTests.items.AddItemPage"/>
+  <class name="adminConfigurationTests.items.DeleteItemPage"/> 
+  <class name="adminConfigurationTests.items.EditItemPage"/>
+  </classes>
+  </test>  -->
+  <!-- -->
+  <test thread-count="5" name="AdminConfigurationForReports">
+  <classes>
+  <class name="adminConfigurationTests.reports.ReportsPage"/>
+  </classes>
+  </test> 
 </suite> 
 

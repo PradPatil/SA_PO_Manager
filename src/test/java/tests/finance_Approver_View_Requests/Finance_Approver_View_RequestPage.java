@@ -18,7 +18,7 @@ public class Finance_Approver_View_RequestPage {
 	public Finance_Approver_View_RequestObject ViewObj;
 
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void FinanceViewRequest(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);

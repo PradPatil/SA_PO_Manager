@@ -27,14 +27,14 @@ public class EditDepartmentPage {
 		Thread.sleep(1000);
 		deptobj.getadminmastertmenu();
 		Thread.sleep(2000);
-		deptobj.getdepartmenttmenu();
+		deptobj.getdepartmentmenu();
 		Thread.sleep(2000);
 		getactivepagination();
 		Thread.sleep(2000);
 		deptobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String deptNameText = deptobj.getdeptname();
-		System.out.println("Department Added:" +deptNameText);
+		System.out.println("Department Edited:" +deptNameText);
 		deptobj.geteditdept();
 		Thread.sleep(1000);
 		deptobj.getActiveCheckbox();

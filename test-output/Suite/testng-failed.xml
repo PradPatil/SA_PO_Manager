@@ -4,13 +4,13 @@
   <listeners>
     <listener class-name="tests.extent_Reports.TestNGListeners"/>
   </listeners>
-  <test thread-count="5" name="Login(failed)">
+  <test thread-count="5" name="AdminConfigurationForReports(failed)">
     <classes>
-      <class name="tests.ViewPages.ViewPage">
+      <class name="adminConfigurationTests.reports.ReportsPage">
         <methods>
-          <include name="ViewRequestDisplay" invocation-numbers="0"/>
+          <include name="ReportGeneration" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.ViewPages.ViewPage -->
+      </class> <!-- adminConfigurationTests.reports.ReportsPage -->
     </classes>
-  </test> <!-- Login(failed) -->
+  </test> <!-- AdminConfigurationForReports(failed) -->
 </suite> <!-- Failed suite [Suite] -->

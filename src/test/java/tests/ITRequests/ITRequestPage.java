@@ -4,28 +4,33 @@ import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObjects.ITRequestsObjects.ITRequestObject;
 import tests.login.LoginPage;
+import utils.AllWaitsScript;
 
 public class ITRequestPage {
-	
 	
 	public JavascriptExecutor js;
 	public WebDriver driver;
 	public String requestID ="";
 	public ITRequestObject ITReqObj;
+	public AllWaitsScript waitobj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void ITRequestCreation(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
 		driver = obj.driver;
 		ITReqObj = new ITRequestObject(driver);
 		Thread.sleep(1000);
+		//WebElement ITReqElement = ITReqObj.getITRequestmenu();
+		//waitobj = new AllWaitsScript();
+		//waitobj.elementvisible(ITReqObj.getITRequestmenu());
 		ITReqObj.getITRequestmenu();
 		Thread.sleep(1000);
 		ITReqObj.getNewRequestmenu();

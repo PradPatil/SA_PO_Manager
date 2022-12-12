@@ -20,7 +20,7 @@ public class DeleteLocationPage {
 	public String locNameText = "";
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void deletelocation(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -43,7 +43,7 @@ public class DeleteLocationPage {
 		getactivepagination();
 		Thread.sleep(2000);
 		String locNameText = locobj.getlocname();
-		System.out.println("Department Deleted:" +locNameText);
+		System.out.println("Location Deleted:" +locNameText);
 		locobj.getSearchLoc(locNameText);
 		Thread.sleep(2000);
 		obj.ValidateLogout();

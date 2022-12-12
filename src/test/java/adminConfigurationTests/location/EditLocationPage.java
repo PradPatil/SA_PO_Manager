@@ -18,7 +18,7 @@ public class EditLocationPage {
 	public EditLocationObject locobj;
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void editlocation(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -31,20 +31,30 @@ public class EditLocationPage {
 		Thread.sleep(2000);
 		getactivepagination();
 		Thread.sleep(2000);
-		locobj.getlastrowscroll();
+		/*locobj.getlastrowscroll();
 		Thread.sleep(1000);
 		String locNameText = locobj.getlocname();
-		System.out.println("Department Added:" +locNameText);
+		System.out.println("Location Edited:" +locNameText);*/
 		locobj.geteditloc();
 		Thread.sleep(1000);
+	// Edit the values in the below fields if required
+      /*locobj.getaddloc();
+		locobj.getaddCompanyName();
+		locobj.getaddaddress1();
+		locobj.getaddaddress2();
+		locobj.getaddCountry();
+		locobj.getaddState();
+		locobj.getaddCity();
+		locobj.getaddPostalCode();
+		locobj.getaddContactNo();*/
 		locobj.getActiveCheckbox();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		locobj.getsubmitloc();
 		Thread.sleep(1000);
 		locobj.getdisplaymsg();
 		Thread.sleep(1000);
-		locobj.getSearchLoc(locNameText);
-		Thread.sleep(2000);
+		//locobj.getSearchLoc(locNameText);
+		//Thread.sleep(2000);
 		obj.ValidateLogout();
 		driver.quit();
 	}

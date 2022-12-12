@@ -20,7 +20,7 @@ public class DeleteRolesPage {
 	public String RoleNameText = "";
 	
 	@Test (dataProvider="getdata")
-	public void ViewRequestDisplay(String username,String password) throws IOException, InterruptedException
+	public void deleteRole(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
@@ -43,7 +43,7 @@ public class DeleteRolesPage {
 		getactivepagination();
 		Thread.sleep(2000);
 		String RoleNameText = roleobj.getrolename();
-		System.out.println("Department Deleted:" +RoleNameText);
+		System.out.println("Role Deleted:" +RoleNameText);
 		roleobj.getSearchDept(RoleNameText);
 		Thread.sleep(2000);
 		obj.ValidateLogout();

@@ -20,7 +20,7 @@ public class FunctionalApprover_RaisedRequestPage {
 	public FunctionalApprover_RaisedRequestObject FunReqObj;
 
 	@Test(dataProvider = "getdata")
-	public void ITRequestcreation(String username, String password) throws IOException, InterruptedException {
+	public void FunctionalApproverRaisedRequest(String username, String password) throws IOException, InterruptedException {
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username, password);
 		driver = obj.driver;

@@ -19,7 +19,7 @@ public class ITRequestor_Modify_RequestPage {
 	public ITRequestor_ModifyRequestObject ITReqObj;
 	
 	@Test (dataProvider="getdata")
-	public void ITRequestcreation(String username,String password) throws IOException, InterruptedException
+	public void ITRequestModify(String username,String password) throws IOException, InterruptedException
 	{
 		LoginPage obj = new LoginPage();
 		obj.validateLogin(username,password);
