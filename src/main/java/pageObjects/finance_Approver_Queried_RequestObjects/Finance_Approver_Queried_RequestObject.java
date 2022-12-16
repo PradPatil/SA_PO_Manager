@@ -8,12 +8,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Finance_Approver_Queried_RequestObject {
-	
+
 	public WebDriver driver;
 
 	public Finance_Approver_Queried_RequestObject(WebDriver driver) {
-		this.driver = driver;		
+		this.driver = driver;
 	}
+
 	By ITRequestmenu = By.xpath("//*[@id='ul-menus']/li[2]");
 	By ViewRequestmenu = By.xpath("//*[@id='ul-menus']/li[2]/ul/li[3]/a");
 	By requestID = By.xpath("//*[@id='valRequestId']");
@@ -23,61 +24,65 @@ public class Finance_Approver_Queried_RequestObject {
 	By actionbuttondropdown = By.id("ddlMyAction");
 	By financeapproverremark = By.id("txtRemarks");
 	By uploadfile = By.id("txtUploadFile");
-	By submitbutton = By.xpath("//*[@id='viewTable']/table/tbody/tr/td/div[2]/div[2]/div[1]/button");	
-	
+	By submitbutton = By.xpath("//*[@id='viewTable']/table/tbody/tr/td/div[2]/div[2]/div[1]/button");
+
 	public void getITRequestmenu() {
 		driver.findElement(ITRequestmenu).click();
 	}
 
 	public void getViewRequestmenu() {
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(ViewRequestmenu)).click().build().perform();	
+		action.moveToElement(driver.findElement(ViewRequestmenu)).click().build().perform();
 	}
-	
+
 	public void getlastrowscroll() {
-		WebElement elementH = driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/section[2]/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div[2]/table/tbody/tr[5]"));
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementH);
-	}	
-		public void getscrolltolastcolumn() {
-			WebElement lastrowcolumn =  driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[11]/span"));
-			 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
-		}
-		
-		public void getactionclick() {
-			driver.findElement(Actionbutton).click();
-			}
-		
-		public String getReqID() {
-			   String requestIDtext = driver.findElement(requestID).getText();
-			    return requestIDtext;
-			    }
-		
-		public void getfinanceapprovaldropdownaction() {
-			Select approvalaction = new Select(driver.findElement(actionbuttondropdown));
-			approvalaction.selectByVisibleText("Queried by Finance Approver");
-		}
-		
-		public void getfinanceremark() {
-	        driver.findElement(financeapproverremark).sendKeys("Request Queried by Finance Approver");
+		WebElement elementH = driver.findElement(By.xpath(
+				"/html/body/div/div[1]/div[1]/section[2]/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div[2]/table/tbody/tr[5]"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementH);
+	}
 
-	    }
-		
-		public void getUploadFile() {
-			driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
-		}
-			
-		public void getfinanceapprovalsubmit() {
-			driver.findElement(submitbutton).click();
-			}
-		
-		public void getsubmitokpopup() {
-			driver.findElement(displaymsgokbtn).click(); 
-		}
-		
-		public void getSearchReqID(String requestIDtext) {
-	        driver.findElement(Searchinput).click();
-	        driver.findElement(Searchinput).sendKeys(requestIDtext);
+	public void getscrolltolastcolumn() {
+		WebElement lastrowcolumn = driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[11]/span"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
+	}
 
-	    }
+	public void getactionclick() {
+		driver.findElement(Actionbutton).click();
+	}
+
+	public String getReqID() {
+		String requestIDtext = driver.findElement(requestID).getText();
+		return requestIDtext;
+	}
+
+	public void getfinanceapprovaldropdownaction() {
+		Select approvalaction = new Select(driver.findElement(actionbuttondropdown));
+		approvalaction.selectByVisibleText("Queried by Finance Approver");
+	}
+
+	public void getfinanceremark() {
+		driver.findElement(financeapproverremark).sendKeys("Request Queried by Finance Approver");
+	}
+
+	// Add attachment section - Choose/Upload File
+	public void getUploadFile() {
+		String current = System.getProperty("user.dir");
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		driver.findElement(uploadfile).sendKeys(filepath);
+	}
+
+	public void getfinanceapprovalsubmit() {
+		driver.findElement(submitbutton).click();
+	}
+
+	public void getsubmitokpopup() {
+		driver.findElement(displaymsgokbtn).click();
+	}
+
+	public void getSearchReqID(String requestIDtext) {
+		driver.findElement(Searchinput).click();
+		driver.findElement(Searchinput).sendKeys(requestIDtext);
+
+	}
 
 }

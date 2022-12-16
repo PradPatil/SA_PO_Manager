@@ -219,9 +219,12 @@ public class Finance_Approver_RaisedRequestObject {
 		    }
 
 	// Add attachment section - Choose/Upload File
-	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
-	}
+		public void getUploadFile() {	
+			String current = System.getProperty("user.dir");
+	        String filepath = current + "\\Documents\\Help-Document.pdf";
+			driver.findElement(uploadfile).sendKeys(filepath);
+		}
+		
 	public void getRemark() {
 		        driver.findElement(Remark).sendKeys("Request Initiated");
 		    }

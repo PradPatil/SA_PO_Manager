@@ -35,10 +35,10 @@ public class AddDepartmentObject {
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(departmentmenu)).click().build().perform();
 	}
-	public void getadddeptoption() {
+	public void getaddeptoption() {
 		driver.findElement(addnewdept).click();
 	}
-	public void getadddept() {
+	public void getaddept() {
 		driver.findElement(deptname).sendKeys(departmentName);
 	}
 	public void getsubmitdept() {

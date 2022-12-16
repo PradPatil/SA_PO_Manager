@@ -65,9 +65,11 @@ public class Functional_Approver_ModifyReq_WhenQueriedBy_FinanceApproverObject {
 
 	}
 
+	// Add attachment section - Choose/Upload File
 	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys(
-				"C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+		String current = System.getProperty("user.dir");
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		driver.findElement(uploadfile).sendKeys(filepath);
 	}
 
 	public void getfunctionalapprovalsubmit() {

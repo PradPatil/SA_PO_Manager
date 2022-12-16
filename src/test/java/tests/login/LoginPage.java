@@ -1,6 +1,7 @@
 package tests.login;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -20,15 +21,17 @@ public class LoginPage extends Base{
 	@Test (dataProvider="getdata")
 	public void validateLogin(String username,String password) throws IOException, InterruptedException
 	{
+		try {
 		driver =initializeDriver();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		obj = new LoginObject(driver);
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		obj.getUserName(username);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		obj.getNextBtn();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		obj.getPassword(password);
+		Thread.sleep(2000);
 		obj.getSignIn();
 		Thread.sleep(2000);
 		obj.getdontshowmsg();
@@ -37,10 +40,39 @@ public class LoginPage extends Base{
 		System.out.println(Welcometext);
 		Assert.assertEquals(Welcometext, "Welcome to Purchase Order Manager Application");
 	}
+		catch(NoSuchElementException e)
+		{
+			driver =initializeDriver();
+			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			obj = new LoginObject(driver);
+			Thread.sleep(2000);
+			obj.getUserName(username);
+			Thread.sleep(1000);
+			obj.getNextBtn();
+			Thread.sleep(2000);
+			obj.getPassword(password);
+			Thread.sleep(2000);
+			obj.getSignIn();
+			Thread.sleep(2000);
+			obj.getdontshowmsg();
+			obj.getNoButton();
+			String Welcometext = obj.getHeading();
+			System.out.println(Welcometext);
+			Assert.assertEquals(Welcometext, "Welcome to Purchase Order Manager Application");
+		}
+	}
+
 	
 	public void ValidateLogout() throws InterruptedException
 	{
 		obj.getLogoutMenu();
+		Thread.sleep(2000);
+		obj.getLogoutyes();
+	}
+	
+	public void ValidateLogoutforadmin() throws InterruptedException
+	{
+		obj.getLogoutadminMenu();
 		Thread.sleep(2000);
 		obj.getLogoutyes();
 	}

@@ -20,6 +20,7 @@ public class LoginObject {
 	By nobutton=By.id("idBtn_Back");
 	By heading = By.xpath("//h2[@style='text-align:center']");
 	By logoutmenu = By.xpath("//*[@id='div-to-scroll']/div/header/nav/div/ul/li[2]");
+	By logoutadminmenu = By.xpath("//*[@id='logoff']");
 	By logoutyes = By.id("btn-success");
 	
 	public void getUserName(String userName) {
@@ -46,6 +47,9 @@ public class LoginObject {
     }
 	public void getLogoutMenu() {
         driver.findElement(logoutmenu).click(); 
+    }
+	public void getLogoutadminMenu() {
+        driver.findElement(logoutadminmenu).click(); 
     }
 	public void getLogoutyes() {
         driver.findElement(logoutyes).click(); 

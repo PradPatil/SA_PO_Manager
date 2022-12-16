@@ -1,7 +1,5 @@
 package tests.extent_Reports;
 
-//import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -14,14 +12,18 @@ import com.aventstack.extentreports.Status;
 public class TestNGListeners extends Extent_Screenshot implements ITestListener {
 
 	// public WebDriver driver;
-	   String screenShotpath = null;
+	 String screenShotpath = null;
 
 	ExtentTest test;
 	ExtentReports extent = Extent_Report.getReportObject();
 	ThreadLocal<ExtentTest> extenttest = new ThreadLocal<ExtentTest>();
-
-	// @Override
+   TestEmailAttachment emailobj = new TestEmailAttachment();
+	
+	@Override
 	public void onFinish(ITestContext context) {
+		//TestEmailAttachment.sendEmailWithAttachment();
+		//emailobj.tearDown();
+		emailobj.sendEmailWithAttachment();
 		extent.flush();
 	}
 
@@ -29,21 +31,19 @@ public class TestNGListeners extends Extent_Screenshot implements ITestListener 
 		// TODO Auto-generated method stub
 	}
 
-	// @Override
+	 @Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 	}
 
-	// @Override
-	
+	@Override
   public void onTestFailure(ITestResult result) {
 	  extenttest.get().fail(result.getThrowable()); 
 	  WebDriver driver=null; 
 	  String testcasename = result.getMethod().getMethodName(); 
 	  try 
 	  { 
-	  driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance()); 
-	 // System.out.println("driver : "+driver); 
+	  driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());  
 	   } 
 	  catch(Exception e) 
 	  { 
@@ -52,45 +52,30 @@ public class TestNGListeners extends Extent_Screenshot implements ITestListener 
 	  try {
 	  extenttest.get().addScreenCaptureFromPath(getscreenshot(testcasename,driver), result.getMethod().getMethodName());
 	  System.out.println("ScreenShot Captured"); 
+	 // TestEmailAttachment.sendEmailWithAttachment();
 	  } 
 	  catch (Exception e) { 
 	 System.out.println("error : "+e.getMessage()); 
 	 }
  }
-	 
-  /*public void onTestFailure(ITestResult result) {
-		test.log(Status.FAIL, "Test Failed");
-		extenttest.get().fail(result.getThrowable());
-		WebDriver driver = null;
-		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
-			// String screenShotpath = null;
-			screenShotpath = getscreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException | IllegalArgumentException | IllegalAccessException | NoSuchFieldException
-				| SecurityException e) {
-			e.printStackTrace();
-		}
-		extenttest.get().addScreenCaptureFromPath(screenShotpath, result.getMethod().getMethodName());
-		System.out.println("ScreenShot Captured");
-	}
-
-	// @Override
+	 @Override
 	public void onTestSkipped(ITestResult result) {
 		test.log(Status.SKIP, "Test Skipped");
 		System.out.println("Test Skipped");
-	}*/
+		//TestEmailAttachment.sendEmailWithAttachment();
+	}
 
-	// @Override
+	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
 		extenttest.set(test);
 		System.out.println("Test Start");
 	}
 
-	// @Override
+	 @Override
 	public void onTestSuccess(ITestResult result) {
 		test.log(Status.PASS, "Test Pass");
 		System.out.println("Test Pass");
+		//TestEmailAttachment.sendEmailWithAttachment();
 	}
-
 }

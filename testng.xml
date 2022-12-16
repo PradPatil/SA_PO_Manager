@@ -180,11 +180,38 @@
   <class name="adminConfigurationTests.items.EditItemPage"/>
   </classes>
   </test>  -->
-  <!-- -->
+  <!--
   <test thread-count="5" name="AdminConfigurationForReports">
   <classes>
   <class name="adminConfigurationTests.reports.ReportsPage"/>
   </classes>
-  </test> 
+  </test>  -->
+  
+   <!-- 
+  <test thread-count="5" name="AdminConfigurationForUserManagement">
+  <classes>
+  <class name="adminConfigurationTests.userManagement.AddUserPage"/>
+  <class name="adminConfigurationTests.userManagement.DeleteUserPage"/>
+  <class name="adminConfigurationTests.userManagement.EditUserPage"/>
+  </classes>
+  </test>  -->
+  
+  <!--   
+  <test thread-count="5" name="AdminConfigurationForVendor">
+  <classes>
+  <class name="adminConfigurationTests.vendor.AddVendorPage"/>
+  <class name="adminConfigurationTests.vendor.DeleteVendorPage"/>
+  <class name="adminConfigurationTests.vendor.EditVendorPage"/>
+  </classes>
+  </test> -->
+  
+  <!--   -->
+  <test thread-count="5" name="AdminConfigurationForProfile">
+  <classes>
+  <class name="adminConfigurationTests.profiles.AddProfilePage"/>
+  <class name="adminConfigurationTests.profiles.DeleteProfilePage"/>
+  <class name="adminConfigurationTests.profiles.EditProfilePage"/>
+  </classes>
+  </test>  
 </suite> 
 

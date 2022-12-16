@@ -13,15 +13,16 @@ public class Functional_Approver_Request_RejectionObject {
 	public Functional_Approver_Request_RejectionObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+
 	By ITRequestmenu = By.xpath("//*[@id='ul-menus']/li[2]");
 	By ViewRequestmenu = By.xpath("//*[@id='ul-menus']/li[2]/ul/li[3]/a");
 	By selectquotationcolumn = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[12]/a");
 	By requestID = By.xpath("//*[@id='valRequestId']");
-	By vendorquotation= By.id("ddlVendorQuotation");
+	By vendorquotation = By.id("ddlVendorQuotation");
 	By vendorQuotationremark = By.id("txtQuotationSubmitRemarks");
-	By VendorQuotationsubmitbtn = By.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[4]/div/div/div[3]/div/div[3]/button");
-	By displaymsgokbtn = By.id("DisplayMsgbtnOk"); 
+	By VendorQuotationsubmitbtn = By
+			.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[4]/div/div/div[3]/div/div[3]/button");
+	By displaymsgokbtn = By.id("DisplayMsgbtnOk");
 	By DownloadPOicon = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[14]/i");
 	By GeneratePODrafticon = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[13]/a/i");
 	By ViewDraftbutton = By.xpath("//*[@id='ViewDraft']");
@@ -34,103 +35,112 @@ public class Functional_Approver_Request_RejectionObject {
 	By uploadfile = By.id("txtUploadFile");
 	By submitbutton = By.xpath("//*[@id='viewTable']/table/tbody/tr/td/div[2]/div[2]/div[1]/button");
 	By Searchinputclosedtab = By.xpath("//*[@id='tblClose_filter']/label/input");
-	By activetoclosetabswitch = By.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[2]/div/div/div/ul/li[2]/a");
-	
+	By activetoclosetabswitch = By
+			.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[2]/div/div/div/ul/li[2]/a");
+
 	public void getITRequestmenu() {
 		driver.findElement(ITRequestmenu).click();
 	}
 
 	public void getViewRequestmenu() {
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(ViewRequestmenu)).click().build().perform();	
+		action.moveToElement(driver.findElement(ViewRequestmenu)).click().build().perform();
 	}
-	
+
 	public void getlastrowscroll() {
-		WebElement elementH = driver.findElement(By.xpath("/html/body/div/div[1]/div[1]/section[2]/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div[2]/table/tbody/tr[last()]"));
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementH);
+		WebElement elementH = driver.findElement(By.xpath(
+				"/html/body/div/div[1]/div[1]/section[2]/div/div/div/div/div[1]/div[2]/div/div[2]/div/div/div[2]/table/tbody/tr[last()]"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementH);
 	}
+
 	public void getscrolltolastcolumn() {
-		WebElement lastrowcolumn =  driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[14]/i"));
-		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
+		WebElement lastrowcolumn = driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[14]/i"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
 	}
-	
+
 	public void getselectquotationcolumn() {
-		 driver.findElement(selectquotationcolumn).click();
+		driver.findElement(selectquotationcolumn).click();
 	}
-	
+
 	public String getReqID() {
-		   String requestIDtext = driver.findElement(requestID).getText();
-		    return requestIDtext;
-		    }
-	
+		String requestIDtext = driver.findElement(requestID).getText();
+		return requestIDtext;
+	}
+
 	public void getvendorquotationselection() {
 		Select quotationselection = new Select(driver.findElement(vendorquotation));
 		quotationselection.selectByIndex(1);
 	}
-	
+
 	public void getvendorquotationremark() {
 		driver.findElement(vendorQuotationremark).sendKeys("Vendor Quotation Selected By Functional Approver");
-		
+
 	}
-	
+
 	public void getvendorquotationsubmit() {
 		driver.findElement(VendorQuotationsubmitbtn).click();
 	}
-	
-	public void getsubmitokpopup() {
-		driver.findElement(displaymsgokbtn).click(); 
-	}
-	
-	public void getSearchReqID(String requestIDtext) {
-        driver.findElement(Searchinput).click();
-        driver.findElement(Searchinput).sendKeys(requestIDtext);
 
-    }
-	
+	public void getsubmitokpopup() {
+		driver.findElement(displaymsgokbtn).click();
+	}
+
+	public void getSearchReqID(String requestIDtext) {
+		driver.findElement(Searchinput).click();
+		driver.findElement(Searchinput).sendKeys(requestIDtext);
+
+	}
+
 	public void getGeneratePOdraft() {
-        driver.findElement(GeneratePODrafticon).click();
-    }
-	
+		driver.findElement(GeneratePODrafticon).click();
+	}
+
 	public void getViewdraft() {
-        driver.findElement(ViewDraftbutton).click();
-    }
+		driver.findElement(ViewDraftbutton).click();
+	}
+
 	public void getPOClose() {
 		driver.findElement(POClosebutton).click();
 	}
+
 	public void getPOSubmit() {
 		driver.findElement(POSubmitbutton).click();
 	}
-	
+
 	public void getactionclick() {
-	driver.findElement(Actionbutton).click();
+		driver.findElement(Actionbutton).click();
 	}
-	
+
 	public void getfunapprovaldropdownaction() {
 		Select approvalaction = new Select(driver.findElement(actionbuttondropdown));
 		approvalaction.selectByVisibleText("Rejected by Functional Approver");
 	}
-	
-	public void getfunctionalremark() {
-        driver.findElement(functionalapproverremark).sendKeys("Request Rejected by Functional Approver");
 
-    }
-	
-	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+	public void getfunctionalremark() {
+		driver.findElement(functionalapproverremark).sendKeys("Request Rejected by Functional Approver");
+
 	}
-		
+
+	// Add attachment section - Choose/Upload File
+	public void getUploadFile() {
+		String current = System.getProperty("user.dir");
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		driver.findElement(uploadfile).sendKeys(filepath);
+	}
+
 	public void getfunctionalapprovalsubmit() {
 		driver.findElement(submitbutton).click();
-		}
-	
+	}
+
 	public void getactivetoclosedtab() {
-        driver.findElement(activetoclosetabswitch).click();
+		driver.findElement(activetoclosetabswitch).click();
 
-    }
+	}
+
 	public void getSearchReqIDInClosedtab(String requestIDtext) {
-        driver.findElement(Searchinputclosedtab).click();
-        driver.findElement(Searchinputclosedtab).sendKeys(requestIDtext);
+		driver.findElement(Searchinputclosedtab).click();
+		driver.findElement(Searchinputclosedtab).sendKeys(requestIDtext);
 
-    }
+	}
 
 }

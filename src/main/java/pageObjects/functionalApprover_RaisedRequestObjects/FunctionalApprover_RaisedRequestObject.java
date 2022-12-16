@@ -34,7 +34,7 @@ public class FunctionalApprover_RaisedRequestObject {
 	By Assetsubmitbtn = By.xpath("//*[@id='myModal']/div/div/div[2]/div[5]/button[2]");
 
 	// Add item Softwares (Item Details )
-	By itemtype = By.id("itemTypesSW"); 
+	By itemtype = By.id("itemTypesSW");
 	By SoftwareName = By.id("txtSoftwareNm");
 	By SoftwareVersion = By.id("txtSoftwareVer");
 	By SoftwareQuantity = By.id("txtSoftwareQty");
@@ -49,7 +49,7 @@ public class FunctionalApprover_RaisedRequestObject {
 	By uploadfile = By.id("txtUploadFile");
 	By Remark = By.id("txtRemarks");
 	By requestsave = By.id("btn_save");
-	//By requestID = By.id("txtRequestID");
+	// By requestID = By.id("txtRequestID");
 	By requestID = By.xpath("//*[@id='valRequestId']");
 	By requestsubmit = By.id("btn_submit");
 	By Clickherelink = By.xpath("(//a[text()='click here'])");
@@ -67,11 +67,13 @@ public class FunctionalApprover_RaisedRequestObject {
 	By UnitRate = By.name("porunitrate");
 	By VAT1 = By.xpath("//*[@id='1']");
 	By VAT2 = By.xpath("//*[@id='2']");
-	By VATPercentage = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[2]/div/table/tbody/tr/td[7]/select");
-	
+	By VATPercentage = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[2]/div/table/tbody/tr/td[7]/select");
+
 	// Quotations details
 	By QuoteNo = By.id("txtReferenceNo");
-	By Quotecalendarpicker = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[7]/td[2]/div/div/input");
+	By Quotecalendarpicker = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[7]/td[2]/div/div/input");
 	By Quotedate = By.id("txtQuotDate");
 	By Quotevalidity = By.id("txtQuotValidatity");
 	By ValueofMS = By.id("txtMS");
@@ -92,17 +94,20 @@ public class FunctionalApprover_RaisedRequestObject {
 	By SoftwareTab = By.id("tabsoftware");
 	By td11Focus = By.xpath("//*[@id='tbl_softwares_data']/tbody/tr/td[11]");
 	By td9Focus = By.xpath("//*[@id='tbl_softwares_data']/tbody/tr/td[9]");
-	By SoftwareUnitRate = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[9]/input");
-	By VATsoftPercentage = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[10]/select");   
+	By SoftwareUnitRate = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[9]/input");
+	By VATsoftPercentage = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[10]/select");
 	By scroll = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]");
 	By QuotationSubmit = By.xpath("//*[@id='myModalQuotation']/div/div/div[3]/button[2]");
 	By Displaymsg = By.id("DisplayMsgbtnOk");
 	By SubmitQuotation = By.id("btnSubmitQuotation");
-	
+
 	By selectquotationcolumn = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[11]/a");
-	By vendorquotation= By.id("ddlVendorQuotation");
+	By vendorquotation = By.id("ddlVendorQuotation");
 	By vendorQuotationremark = By.id("txtQuotationSubmitRemarks");
-	By VendorQuotationsubmitbtn = By.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[4]/div/div/div[3]/div/div[3]/button");
+	By VendorQuotationsubmitbtn = By
+			.xpath("//*[@id='div-to-scroll']/div/div[1]/div[1]/section[4]/div/div/div[3]/div/div[3]/button");
 	By displaymsgokbtn = By.id("DisplayMsgbtnOk");
 	By DownloadPOicon = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[13]/a/i");
 	By GeneratePODrafticon = By.xpath("//*[@id='tblActive']/tbody/tr[last()]/td[12]/a/i");
@@ -123,7 +128,7 @@ public class FunctionalApprover_RaisedRequestObject {
 
 	public void getNewRequestmenu() {
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(newrequest)).click().build().perform();	
+		action.moveToElement(driver.findElement(newrequest)).click().build().perform();
 	}
 
 	public void getDeliveryLocation() {
@@ -138,20 +143,20 @@ public class FunctionalApprover_RaisedRequestObject {
 		driver.findElement(CERNO).sendKeys("CER0011");
 	}
 
-	/*public void getDepartment() {
-		//driver.findElement(department).click();
-		Select dept = new Select(driver.findElement(department));
-		dept.selectByVisibleText("Application Delivery");
-	}*/
+	/*
+	 * public void getDepartment() { //driver.findElement(department).click();
+	 * Select dept = new Select(driver.findElement(department));
+	 * dept.selectByVisibleText("Application Delivery"); }
+	 */
 
 	public void getITRadiobtn() {
-		 driver.findElement(ITRadioButton).click();
+		driver.findElement(ITRadioButton).click();
 	}
 
 	// Add item Assets & Accessories (Item Details )
 	public void getAddBtn() {
-		   driver.findElement(addbutton).click();
-		}
+		driver.findElement(addbutton).click();
+	}
 
 	public void getAsset() {
 		driver.findElement(Assets).click();
@@ -179,8 +184,9 @@ public class FunctionalApprover_RaisedRequestObject {
 
 	// Add item Softwares (Item Details )
 	public void getsoftAddBtn() {
-        driver.findElement(addbutton).click();
-    }
+		driver.findElement(addbutton).click();
+	}
+
 	public void getItemType() {
 		driver.findElement(itemtype).click();
 	}
@@ -212,43 +218,47 @@ public class FunctionalApprover_RaisedRequestObject {
 	public void getSoftWareStartDate() {
 		driver.findElement(SoftStartDate).sendKeys(Keys.ENTER);
 	}
+
 	public void getSoftWareEndDate() {
-        driver.findElement(SoftEndDate).sendKeys("12/30/2022");
-        }
+		driver.findElement(SoftEndDate).sendKeys("12/30/2022");
+	}
 
 	public void getSoftwareSubmitBtn() {
-		        driver.findElement(Softwaresubmitbtn).click();
-		    }
+		driver.findElement(Softwaresubmitbtn).click();
+	}
 
 	// Add attachment section - Choose/Upload File
 	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+		String current = System.getProperty("user.dir");
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		driver.findElement(uploadfile).sendKeys(filepath);
 	}
+
 	public void getRemark() {
-		        driver.findElement(Remark).sendKeys("Request Initiated");
-		    }
+		driver.findElement(Remark).sendKeys("Request Initiated");
+	}
 
 	public void getReqSave() {
 		driver.findElement(requestsave).click();
 	}
-	
+
 	public void getReqSubmit() {
-        driver.findElement(requestsubmit).click();
-    }
-	
+		driver.findElement(requestsubmit).click();
+	}
+
 	public void getClickHere() {
-        driver.findElement(Clickherelink).click();
-    }
+		driver.findElement(Clickherelink).click();
+	}
 
 	public String getReqID() {
-		   String requestIDtext = driver.findElement(requestID).getText();
-		    return requestIDtext;
-		    }
-	
+		String requestIDtext = driver.findElement(requestID).getText();
+		return requestIDtext;
+	}
+
 	// Code for Quotation Details (Add/Submit Quotations)
 	public void getCheckPriceCheckbox() {
-		    driver.findElement(Pricecheckbox).click();
-		    }
+		driver.findElement(Pricecheckbox).click();
+	}
 
 	public void getAddQuotationBtn() {
 		driver.findElement(AddQuotationbtn).click();
@@ -263,16 +273,17 @@ public class FunctionalApprover_RaisedRequestObject {
 	}
 
 	public void getVendorRemark() {
-		        driver.findElement(VendorRemark).sendKeys("Vendor Selected");
-		    }
+		driver.findElement(VendorRemark).sendKeys("Vendor Selected");
+	}
+
 	public void getUnitRates() {
-		        driver.findElement(UnitRate).sendKeys("1000");
-		    }
+		driver.findElement(UnitRate).sendKeys("1000");
+	}
 
 	public void getVATPercentage() {
-		 driver.findElement(VATPercentage).click(); 
-		 driver.findElement(VAT2).click();
-		    }
+		driver.findElement(VATPercentage).click();
+		driver.findElement(VAT2).click();
+	}
 
 	// Quotations details
 	public void getQuoteNo() {
@@ -314,116 +325,131 @@ public class FunctionalApprover_RaisedRequestObject {
 
 	// Terms & Conditions
 	public void getSLA() {
-	        driver.findElement(SLA).sendKeys("Test SLA");
-	    }
+		driver.findElement(SLA).sendKeys("Test SLA");
+	}
+
 	public void getDeliveryCharge() {
-	        driver.findElement(DeliveryCharge).sendKeys("200");
-	    }
+		driver.findElement(DeliveryCharge).sendKeys("200");
+	}
+
 	public void getDeliveryTimeline() {
-	        driver.findElement(DeliveryTimelines).sendKeys("10Days");
-	    }
+		driver.findElement(DeliveryTimelines).sendKeys("10Days");
+	}
+
 	public void getPayment() {
-	        driver.findElement(Payment).sendKeys("Online");
-	    }
+		driver.findElement(Payment).sendKeys("Online");
+	}
+
 	public void getWarranty() {
-	        driver.findElement(Warranty).sendKeys("5 Years");
-	    }
+		driver.findElement(Warranty).sendKeys("5 Years");
+	}
+
 	public void getSOW() {
-	        driver.findElement(SOW).sendKeys("SOW");
-	    }
-	
+		driver.findElement(SOW).sendKeys("SOW");
+	}
+
 	// Software Tab -
 	public void getSoftTab() {
-	        driver.findElement(SoftwareTab).click();
-	    }
+		driver.findElement(SoftwareTab).click();
+	}
+
 	public void getTd11() {
-	        driver.findElement(td11Focus).click();
-	    }
+		driver.findElement(td11Focus).click();
+	}
+
 	public void getTd9() {
-	        driver.findElement(td9Focus).click();
-	    }
+		driver.findElement(td9Focus).click();
+	}
+
 	public void getsoftwareunit() {
-	        driver.findElement(SoftwareUnitRate).sendKeys("1200");
-	    }
-	public void getVAT() throws InterruptedException { 
+		driver.findElement(SoftwareUnitRate).sendKeys("1200");
+	}
+
+	public void getVAT() throws InterruptedException {
 		Select SWVAT = new Select(driver.findElement(VATsoftPercentage));
 		SWVAT.selectByVisibleText("15%");
-	    }
-	
-	public void getscroll() {
-        driver.findElement(scroll).sendKeys(Keys.PAGE_DOWN);
-    }
-	public void getQuoteSubmit() {
-	        driver.findElement(QuotationSubmit).click();
-	    }
-	public void getDisplayMsg() {
-	        driver.findElement(Displaymsg).click();
-	    }
-	public void getSubmitQuote() {
-	        driver.findElement(SubmitQuotation).click();
-	    }
-	public void getSearchReqID(String requestIDtext) {
-        driver.findElement(Searchinput).click();
-        driver.findElement(Searchinput).sendKeys(requestIDtext);
+	}
 
-    }
-	
+	public void getscroll() {
+		driver.findElement(scroll).sendKeys(Keys.PAGE_DOWN);
+	}
+
+	public void getQuoteSubmit() {
+		driver.findElement(QuotationSubmit).click();
+	}
+
+	public void getDisplayMsg() {
+		driver.findElement(Displaymsg).click();
+	}
+
+	public void getSubmitQuote() {
+		driver.findElement(SubmitQuotation).click();
+	}
+
+	public void getSearchReqID(String requestIDtext) {
+		driver.findElement(Searchinput).click();
+		driver.findElement(Searchinput).sendKeys(requestIDtext);
+
+	}
+
 	public void getscrolltolastcolumn() {
-		WebElement lastrowcolumn =  driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[13]/i"));
-		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
+		WebElement lastrowcolumn = driver.findElement(By.xpath("(//*[@id='tblActive']/tbody/tr)[last()]/td[13]/i"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", lastrowcolumn);
 	}
-	
+
 	public void getselectquotationcolumn() {
-		 driver.findElement(selectquotationcolumn).click();
+		driver.findElement(selectquotationcolumn).click();
 	}
-	
+
 	public void getvendorquotationselection() {
 		Select quotationselection = new Select(driver.findElement(vendorquotation));
 		quotationselection.selectByIndex(1);
 	}
-	
+
 	public void getvendorquotationremark() {
 		driver.findElement(vendorQuotationremark).sendKeys("Vendor Quotation Selected By Functional Approver");
-		
+
 	}
-	
+
 	public void getvendorquotationsubmit() {
 		driver.findElement(VendorQuotationsubmitbtn).click();
 	}
-	
+
 	public void getsubmitokpopup() {
-		driver.findElement(displaymsgokbtn).click(); 
+		driver.findElement(displaymsgokbtn).click();
 	}
-	
+
 	public void getGeneratePOdraft() {
-       driver.findElement(GeneratePODrafticon).click();
-   }
-	
+		driver.findElement(GeneratePODrafticon).click();
+	}
+
 	public void getViewdraft() {
-       driver.findElement(ViewDraftbutton).click();
-   }
+		driver.findElement(ViewDraftbutton).click();
+	}
+
 	public void getPOClose() {
 		driver.findElement(POClosebutton).click();
 	}
+
 	public void getPOSubmit() {
 		driver.findElement(POSubmitbutton).click();
 	}
-	
+
 	public void getactionclick() {
-	driver.findElement(Actionbutton).click();
+		driver.findElement(Actionbutton).click();
 	}
-	
+
 	public void getfunapprovaldropdownaction() {
 		Select approvalaction = new Select(driver.findElement(actionbuttondropdown));
 		approvalaction.selectByVisibleText("Approved by Functional Approver");
 	}
-	
-	public void getfunctionalremark() {
-       driver.findElement(functionalapproverremark).sendKeys("Request Approved by Functional Approver");
 
-   }
-		
+	public void getfunctionalremark() {
+		driver.findElement(functionalapproverremark).sendKeys("Request Approved by Functional Approver");
+
+	}
+
 	public void getfunctionalapprovalsubmit() {
 		driver.findElement(submitbutton).click();
-		}
+	}
 }

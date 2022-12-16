@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-12T18:43:29 IST" name="Suite" finished-at="2022-12-12T18:44:02 IST" duration-ms="32376">
+  <suite started-at="2022-12-16T17:32:43 IST" name="Suite" finished-at="2022-12-16T17:35:32 IST" duration-ms="168051">
     <groups>
     </groups>
-    <test started-at="2022-12-12T18:43:29 IST" name="AdminConfigurationForReports" finished-at="2022-12-12T18:44:02 IST" duration-ms="32376">
-      <class name="adminConfigurationTests.reports.ReportsPage">
-        <test-method signature="ReportGeneration(java.lang.String,java.lang.String)[pri:0, instance:adminConfigurationTests.reports.ReportsPage@25be7b63]" started-at="2022-12-12T18:43:29 IST" name="ReportGeneration" data-provider="getdata" finished-at="2022-12-12T18:44:01 IST" duration-ms="32123" status="FAIL">
+    <test started-at="2022-12-16T17:32:43 IST" name="AdminConfigurationForVendor" finished-at="2022-12-16T17:35:32 IST" duration-ms="168051">
+      <class name="adminConfigurationTests.vendor.EditVendorPage">
+        <test-method signature="editVendor(java.lang.String,java.lang.String)[pri:0, instance:adminConfigurationTests.vendor.EditVendorPage@7a5ceedd]" started-at="2022-12-16T17:33:42 IST" name="editVendor" data-provider="getdata" finished-at="2022-12-16T17:35:32 IST" duration-ms="109155" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,70 +20,28 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable: [object HTMLOptionElement] has no size and location
-  (Session info: chrome=107.0.5304.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LMP2NXTHTTFF63', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60613}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: abb3b897ad8491b6b2a9af80d302424c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLOptionElement] has no size and location
-  (Session info: chrome=107.0.5304.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LMP2NXTHTTFF63', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\P50044~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60613}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: abb3b897ad8491b6b2a9af80d302424c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-at adminConfigurationObjects.reportsObjects.ReportsObject.getuserClosedStatus(ReportsObject.java:55)
-at adminConfigurationTests.reports.ReportsPage.ReportGeneration(ReportsPage.java:45)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReportGeneration -->
-      </class> <!-- adminConfigurationTests.reports.ReportsPage -->
-    </test> <!-- AdminConfigurationForReports -->
+        </test-method> <!-- editVendor -->
+      </class> <!-- adminConfigurationTests.vendor.EditVendorPage -->
+      <class name="adminConfigurationTests.vendor.DeleteVendorPage">
+        <test-method signature="deleteVendor(java.lang.String,java.lang.String)[pri:0, instance:adminConfigurationTests.vendor.DeleteVendorPage@6b695b06]" started-at="2022-12-16T17:32:44 IST" name="deleteVendor" data-provider="getdata" finished-at="2022-12-16T17:33:42 IST" duration-ms="58845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[P50044121@capitaindia.onmicrosoft.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Welcome^123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteVendor -->
+      </class> <!-- adminConfigurationTests.vendor.DeleteVendorPage -->
+    </test> <!-- AdminConfigurationForVendor -->
   </suite> <!-- Suite -->
 </testng-results>

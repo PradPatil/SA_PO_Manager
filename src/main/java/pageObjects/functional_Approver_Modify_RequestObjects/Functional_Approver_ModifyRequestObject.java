@@ -85,6 +85,7 @@ public class Functional_Approver_ModifyRequestObject {
 	public void getCheckPriceCheckbox() {
 		driver.findElement(Pricecheckbox).click();
 	}
+
 	public void getSubmitQuote() {
 		driver.findElement(SubmitQuotation).click();
 	}
@@ -98,27 +99,30 @@ public class Functional_Approver_ModifyRequestObject {
 		driver.findElement(Searchinput).sendKeys(requestIDtext);
 
 	}
+
 	public void getactionclick() {
-        driver.findElement(action).click();
-    }
-	
+		driver.findElement(action).click();
+	}
+
 	public void getfunapprovaldropdownaction() {
 		Select approvalaction = new Select(driver.findElement(actionbuttondropdown));
 		approvalaction.selectByVisibleText("Approved by Functional Approver");
 	}
-	
-	public void getfunctionalremark() {
-        driver.findElement(functionalapproverremark).sendKeys("Request Approved by Functional Approver");
 
-    }
-	
-	public void getUploadFile() {
-		driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
+	public void getfunctionalremark() {
+		driver.findElement(functionalapproverremark).sendKeys("Request Approved by Functional Approver");
+
 	}
-		
+
+	// Add attachment section - Choose/Upload File
+	public void getUploadFile() {
+		String current = System.getProperty("user.dir");
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		driver.findElement(uploadfile).sendKeys(filepath);
+	}
+
 	public void getfunctionalapprovalsubmit() {
 		driver.findElement(submitbutton).click();
-		}
-	
+	}
 
 }

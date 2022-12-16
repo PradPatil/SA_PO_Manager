@@ -32,7 +32,7 @@ public class ITRequestObject {
 	By Assetsubmitbtn = By.xpath("//*[@id='myModal']/div/div/div[2]/div[5]/button[2]");
 
 	// Add item Softwares (Item Details )
-	By itemtype = By.id("itemTypesSW"); 
+	By itemtype = By.id("itemTypesSW");
 	By SoftwareName = By.id("txtSoftwareNm");
 	By SoftwareVersion = By.id("txtSoftwareVer");
 	By SoftwareQuantity = By.id("txtSoftwareQty");
@@ -47,7 +47,7 @@ public class ITRequestObject {
 	By uploadfile = By.id("txtUploadFile");
 	By Remark = By.id("txtRemarks");
 	By requestsave = By.id("btn_save");
-	//By requestID = By.id("txtRequestID");
+	// By requestID = By.id("txtRequestID");
 	By requestID = By.xpath("//*[@id='valRequestId']");
 	By requestsubmit = By.id("btn_submit");
 	By Clickherelink = By.xpath("(//a[text()='click here'])");
@@ -65,13 +65,15 @@ public class ITRequestObject {
 	By UnitRate = By.name("porunitrate");
 	By VAT1 = By.xpath("//*[@id='1']");
 	By VAT2 = By.xpath("//*[@id='2']");
-	By VATPercentage = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[2]/div/table/tbody/tr/td[7]/select");
-	
+	By VATPercentage = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[2]/div/table/tbody/tr/td[7]/select");
+
 	// Quotations details
 	By QuoteNo = By.id("txtReferenceNo");
-	By Quotecalendarpicker = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[7]/td[2]/div/div/input");
+	By Quotecalendarpicker = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[7]/td[2]/div/div/input");
 	By Quotedate = By.id("txtQuotDate");
-	//By Quotedate = By.xpath("//*[@id='txtQuotDate']");
+	// By Quotedate = By.xpath("//*[@id='txtQuotDate']");
 	By Quotevalidity = By.id("txtQuotValidatity");
 	By ValueofMS = By.id("txtMS");
 	By Currency = By.xpath("//*[@id=\"4\"]");
@@ -91,10 +93,12 @@ public class ITRequestObject {
 	By SoftwareTab = By.id("tabsoftware");
 	By td11Focus = By.xpath("//*[@id='tbl_softwares_data']/tbody/tr/td[11]");
 	By td9Focus = By.xpath("//*[@id='tbl_softwares_data']/tbody/tr/td[9]");
-	By SoftwareUnitRate = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[9]/input");
-	By VATsoftPercentage = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[10]/select");
-	//By SoftwareVAT1 = By.xpath("//*[@id='1']");
-	//By SoftwareVAT2 = By.xpath("//*[@id='2']");   
+	By SoftwareUnitRate = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[9]/input");
+	By VATsoftPercentage = By.xpath(
+			"/html/body/div[1]/div[1]/div[1]/section[4]/div[2]/div/div/div[2]/table/tbody/tr[5]/td/div[3]/div/table/tbody/tr/td[10]/select");
+	// By SoftwareVAT1 = By.xpath("//*[@id='1']");
+	// By SoftwareVAT2 = By.xpath("//*[@id='2']");
 	By scroll = By.xpath("/html/body/div[1]/div[1]/div[1]/section[4]/div[2]");
 	By QuotationSubmit = By.xpath("//*[@id='myModalQuotation']/div/div/div[3]/button[2]");
 	By Displaymsg = By.id("DisplayMsgbtnOk");
@@ -104,13 +108,13 @@ public class ITRequestObject {
 	By Searchinput = By.xpath("//*[@id='tblActive_filter']/label/input");
 
 	public void getITRequestmenu() {
-		//return driver.findElement(ITRequestmenu);
+		// return driver.findElement(ITRequestmenu);
 		driver.findElement(ITRequestmenu).click();
 	}
 
 	public void getNewRequestmenu() {
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(newrequest)).click().build().perform();	
+		action.moveToElement(driver.findElement(newrequest)).click().build().perform();
 	}
 
 	public void getDeliveryLocation() {
@@ -125,26 +129,26 @@ public class ITRequestObject {
 		driver.findElement(CERNO).sendKeys("CER0011");
 	}
 
-	/*public void getDepartment() {
-		//driver.findElement(department).click();
-		Select dept = new Select(driver.findElement(department));
-		dept.selectByVisibleText("Application Delivery");
-	}*/
+	/*
+	 * public void getDepartment() { //driver.findElement(department).click();
+	 * Select dept = new Select(driver.findElement(department));
+	 * dept.selectByVisibleText("Application Delivery"); }
+	 */
 
 	public void getITRadiobtn() {
-		 driver.findElement(ITRadioButton).click();
+		driver.findElement(ITRadioButton).click();
 	}
 
 	// Add item Assets & Accessories (Item Details )
 	public void getAddBtn() {
-		   driver.findElement(addbutton).click();
-		}
+		driver.findElement(addbutton).click();
+	}
 
 	public void getAsset() {
 		driver.findElement(Assets).click();
 	}
 
-	public void getPartCode() { 
+	public void getPartCode() {
 		driver.findElement(PartCode).sendKeys("P-123");
 	}
 
@@ -166,8 +170,9 @@ public class ITRequestObject {
 
 	// Add item Softwares (Item Details )
 	public void getsoftAddBtn() {
-        driver.findElement(addbutton).click();
-    }
+		driver.findElement(addbutton).click();
+	}
+
 	public void getItemType() {
 		driver.findElement(itemtype).click();
 	}
@@ -199,46 +204,49 @@ public class ITRequestObject {
 	public void getSoftWareStartDate() {
 		driver.findElement(SoftStartDate).sendKeys(Keys.ENTER);
 	}
+
 	public void getSoftWareEndDate() {
-        driver.findElement(SoftEndDate).sendKeys("12/30/2022");
-        }
+		driver.findElement(SoftEndDate).sendKeys("12/30/2022");
+	}
 
 	public void getSoftwareSubmitBtn() {
-		        driver.findElement(Softwaresubmitbtn).click();
-		    }
+		driver.findElement(Softwaresubmitbtn).click();
+	}
 
 	// Add attachment section - Choose/Upload File
 	public void getUploadFile() {
-		//driver.findElement(uploadfile).sendKeys("C:\\Users\\P50044121\\Capita_Automation\\Selenium_Projects\\SA_PO_Manager-master\\Documents\\Help Document.pdf");
-		//driver.findElement(uploadfile).sendKeys(("user.dir") + "//SA_PO_Manager-master//Documents//Help Document.pdf");
-		driver.findElement(uploadfile).sendKeys(("user.dir") + "Documents\\Help Document.pdf");
-		
+		String current = System.getProperty("user.dir");
+		// System.out.println("Current working directory in Java : " + current);
+		String filepath = current + "\\Documents\\Help-Document.pdf";
+		// System.out.println("FilePath:" + filepath);
+		driver.findElement(uploadfile).sendKeys(filepath);
 	}
+
 	public void getRemark() {
-		        driver.findElement(Remark).sendKeys("Request Initiated");
-		    }
+		driver.findElement(Remark).sendKeys("Request Initiated");
+	}
 
 	public void getReqSave() {
 		driver.findElement(requestsave).click();
 	}
-	
+
 	public void getReqSubmit() {
-        driver.findElement(requestsubmit).click();
-    }
-	
+		driver.findElement(requestsubmit).click();
+	}
+
 	public void getClickHere() {
-        driver.findElement(Clickherelink).click();
-    }
+		driver.findElement(Clickherelink).click();
+	}
 
 	public String getReqID() {
-		   String requestIDtext = driver.findElement(requestID).getText();
-		    return requestIDtext;
-		    }
-	
+		String requestIDtext = driver.findElement(requestID).getText();
+		return requestIDtext;
+	}
+
 	// Code for Quotation Details (Add/Submit Quotations)
 	public void getCheckPriceCheckbox() {
-		    driver.findElement(Pricecheckbox).click();
-		    }
+		driver.findElement(Pricecheckbox).click();
+	}
 
 	public void getAddQuotationBtn() {
 		driver.findElement(AddQuotationbtn).click();
@@ -253,25 +261,27 @@ public class ITRequestObject {
 	}
 
 	public void getVendorRemark() {
-		        driver.findElement(VendorRemark).sendKeys("Vendor Selected");
-		    }
+		driver.findElement(VendorRemark).sendKeys("Vendor Selected");
+	}
+
 	public void getUnitRates() {
-		        driver.findElement(UnitRate).sendKeys("1000");
-		    }
+		driver.findElement(UnitRate).sendKeys("1000");
+	}
 
 	public void getVATPercentage() {
-		 driver.findElement(VATPercentage).click(); 
-		 driver.findElement(VAT2).click();
-		    }
+		driver.findElement(VATPercentage).click();
+		driver.findElement(VAT2).click();
+	}
 
 	// Quotations details
 	public void getQuoteNo() {
 		driver.findElement(QuoteNo).sendKeys("Q-1234");
 	}
 
-	/*public void getQuoteCalendarPicker() {
-		driver.findElement(Quotecalendarpicker).click();
-	}*/
+	/*
+	 * public void getQuoteCalendarPicker() {
+	 * driver.findElement(Quotecalendarpicker).click(); }
+	 */
 
 	public void getQuoteDate() {
 		driver.findElement(Quotedate).sendKeys("Current Time In India");
@@ -304,58 +314,71 @@ public class ITRequestObject {
 
 	// Terms & Conditions
 	public void getSLA() {
-	        driver.findElement(SLA).sendKeys("Test SLA");
-	    }
+		driver.findElement(SLA).sendKeys("Test SLA");
+	}
+
 	public void getDeliveryCharge() {
-	        driver.findElement(DeliveryCharge).sendKeys("200");
-	    }
+		driver.findElement(DeliveryCharge).sendKeys("200");
+	}
+
 	public void getDeliveryTimeline() {
-	        driver.findElement(DeliveryTimelines).sendKeys("10Days");
-	    }
+		driver.findElement(DeliveryTimelines).sendKeys("10Days");
+	}
+
 	public void getPayment() {
-	        driver.findElement(Payment).sendKeys("Online");
-	    }
+		driver.findElement(Payment).sendKeys("Online");
+	}
+
 	public void getWarranty() {
-	        driver.findElement(Warranty).sendKeys("5 Years");
-	    }
+		driver.findElement(Warranty).sendKeys("5 Years");
+	}
+
 	public void getSOW() {
-	        driver.findElement(SOW).sendKeys("SOW");
-	    }
-	
+		driver.findElement(SOW).sendKeys("SOW");
+	}
+
 	// Software Tab -
 	public void getSoftTab() {
-	        driver.findElement(SoftwareTab).click();
-	    }
+		driver.findElement(SoftwareTab).click();
+	}
+
 	public void getTd11() {
-	        driver.findElement(td11Focus).click();
-	    }
+		driver.findElement(td11Focus).click();
+	}
+
 	public void getTd9() {
-	        driver.findElement(td9Focus).click();
-	    }
+		driver.findElement(td9Focus).click();
+	}
+
 	public void getsoftwareunit() {
-	        driver.findElement(SoftwareUnitRate).sendKeys("1200");
-	    }
-	public void getVAT() throws InterruptedException { 
+		driver.findElement(SoftwareUnitRate).sendKeys("1200");
+	}
+
+	public void getVAT() throws InterruptedException {
 		Select SWVAT = new Select(driver.findElement(VATsoftPercentage));
 		SWVAT.selectByVisibleText("15%");
-	    }
-	
-	public void getscroll() {
-        driver.findElement(scroll).sendKeys(Keys.PAGE_DOWN);
-    }
-	public void getQuoteSubmit() {
-	        driver.findElement(QuotationSubmit).click();
-	    }
-	public void getDisplayMsg() {
-	        driver.findElement(Displaymsg).click();
-	    }
-	public void getSubmitQuote() {
-	        driver.findElement(SubmitQuotation).click();
-	    }
-	public void getSearchReqID(String requestIDtext) {
-        driver.findElement(Searchinput).click();
-        driver.findElement(Searchinput).sendKeys(requestIDtext);
+	}
 
-    }
+	public void getscroll() {
+		driver.findElement(scroll).sendKeys(Keys.PAGE_DOWN);
+	}
+
+	public void getQuoteSubmit() {
+		driver.findElement(QuotationSubmit).click();
+	}
+
+	public void getDisplayMsg() {
+		driver.findElement(Displaymsg).click();
+	}
+
+	public void getSubmitQuote() {
+		driver.findElement(SubmitQuotation).click();
+	}
+
+	public void getSearchReqID(String requestIDtext) {
+		driver.findElement(Searchinput).click();
+		driver.findElement(Searchinput).sendKeys(requestIDtext);
+
+	}
 
 }

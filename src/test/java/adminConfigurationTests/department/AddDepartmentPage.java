@@ -33,9 +33,9 @@ public class AddDepartmentPage {
 		Thread.sleep(2000);
 		deptobj.getdepartmentmenu();
 		Thread.sleep(2000);
-		deptobj.getadddeptoption();	
+		deptobj.getaddeptoption();	
 		Thread.sleep(2000);
-		deptobj.getadddept();
+		deptobj.getaddept();
 		Thread.sleep(2000);
 		deptobj.getsubmitdept();
 		Thread.sleep(1000);
